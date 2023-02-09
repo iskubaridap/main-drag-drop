@@ -26,11 +26,13 @@
 }
 
 #drop-message {
-  margin-left:-12px;
-  margin-right:-20px;
   padding:20px;
   position:absolute;
   z-index:10;
+  left: 0;
+  background-color: #58151c;
+  color: #fff;
+  width: 100%;
 }
 
 #drop-message-notice {
@@ -81,10 +83,9 @@
 }
 
 #drag-drop-btn {
-  padding:0 20px;
   width:100%;
   position:absolute;
-  z-index:10px;
+  z-index:10;
   bottom:0;
   left:0;
 }
@@ -102,9 +103,6 @@
 
 .antivirus-logo {
   bottom:20px;
-}
-
-.next-page-btn {
 }
 
 .drag-item {
@@ -144,8 +142,12 @@
   background-position:left bottom;
 }
 
-.yellow-text, .selected {
+.yellow-text {
   color:#F5C714;
+}
+
+.selected {
+  color: #58151c;
 }
 
 .gray-text {
@@ -161,3 +163,11 @@
   background-color: brown;
 }
 
+#draggable-section-wrap {
+  height: 100vh;
+  background-color: #ffe5d0;
+}
+#drop-message-section-wrap {
+  height: 100vh;
+  position: relative;
+}
