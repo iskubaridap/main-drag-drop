@@ -2,5 +2,9 @@
 /bootstrap2/*
 /fonts/mcafee/*
 /media/video/*
-!/media/video/README.md
 /img/*
+!/bootstrap/README.md
+!/bootstrap2/README.md
+!/fonts/README.md
+!/img/README.md
+!/media/video/README.md
