@@ -1,0 +1,45 @@
+
+#activity-title {
+    text-align: center;
+    font-weight: bold;
+}
+.answer-response-txt {
+    display: none;
+}
+.answer-response-txt.active {
+    display: block;
+}
+.response-btns {
+    display: none;
+}
+.response-btns.active {
+    display: inline-block;
+}
+#dropdown-submit-btn-wrap {
+    text-align: center;
+}
+@media (min-width:1200px) {
+    #activity-title {
+        font-size: 5em;
+    }
+}
+@media (max-width:1199px) {
+    #activity-title {
+        font-size: 5em;
+    }
+}
+@media (max-width:1024px) {
+    #activity-title {
+        font-size: 5em;
+    }
+}
+@media (max-width:991px) {
+    #activity-title {
+        font-size: 3em;
+    }
+}
+@media (max-width:767px) {
+    #activity-title {
+        font-size: 2em;
+    }
+}

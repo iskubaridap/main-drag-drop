@@ -1,0 +1,213 @@
+:root{
+    --yellow-activity: var(--yellow);
+    --correct-activity: #0f5132;
+    --incorrect-activity: #842029;
+}
+
+#page-activity-draggable-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.drag-elem-wrap {
+    z-index: 2;
+}
+#chronicle-logo-placeholder {
+    z-index: 1;
+}
+#cybereason-logo-header,
+#chronicle-complete-logo-header {
+    position: relative;
+}
+#x-header-icn {
+    font-size: 5em;
+    vertical-align: top;
+}
+.droppable-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.droppable-item-wrap {
+    width: 100%;
+    text-align: center;
+    background-color: unset;
+    border: unset;
+}
+.droppable-txt {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+.droppable-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.droppable-item-content {
+    width: 100%;
+}
+#page-activity-droppable-wrap .droppable {
+    margin-bottom: 0;
+    border-radius: 0;
+    min-height: 205px;
+    position: relative;
+    bottom: -15px;
+}
+#page-activity-droppable-wrap .droppable .draggable {
+    margin: 5px auto;
+}
+#drag-drop-response-wrap {
+    min-height: 80px;
+}
+.drag-elem-wrap,
+.draggable,
+.draggable-txt-wrap {
+    width: calc(100% - 10px);
+    min-height: 60px;
+}
+.draggable-txt-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    background-color: var(--yellow-activity);
+    color: #000;
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.draggable-txt-wrap.correct {
+    background-color: var(--correct-activity);
+    color: #fff;
+}
+.draggable-txt-wrap.incorrect {
+    background-color: var(--incorrect-activity);
+    color: #fff;
+}
+.draggable-txt {
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 25px;
+}
+.drag-elem-group {
+    display: flex;
+    justify-content:space-between; 
+}
+.container-fluid {
+    position: relative;
+    z-index: 1;
+}
+.droppable-divider {
+    width: 5px;
+    height: 150px;
+    background-color: #fff;
+    position: relative;
+    bottom: 30px;
+}
+#drag-drop-container .response-btns.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 120px;
+    color: var(--text-color);
+    box-shadow: 5px 5px 0px rgb(0 0 0 / 75%);
+}
+#drag-drop-container .response-btns.active:hover {
+    background-color: var(--yellow-activity);
+}
+#question-wrap {
+    justify-content: center;
+}
+#page-activity-dropdown-wrap .dropdown-txt {
+    margin-bottom: 5px;
+    color: #fff;
+}
+.dropdown-txt {
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: unset;
+}
+.quiz-dropdown-select.correct {
+    background-color: var(--blue);
+    color: #fff;
+}
+.quiz-dropdown-select.incorrect {
+    background-color: var(--incorrect-activity);
+    color: #fff;
+}
+@media (min-width:1200px) {
+    #cybereason-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    #chronicle-complete-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    .draggable-chronicle-logo,
+    .draggable-chronicle-logo {
+        width: auto;
+        height: 100px;
+    }
+    
+}
+@media (max-width:1199px) {
+    #cybereason-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    #chronicle-complete-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    .draggable-chronicle-logo {
+        width: auto;
+        height: 75px;
+    }
+    .droppable-img {
+        max-width: 140px;
+        height: auto;
+    }
+    .droppable-img {
+        max-width: 140px;
+        height: auto;
+    }
+}
+@media (max-width:991px) {
+    #cybereason-logo-header{
+        padding-bottom: 0 !important;
+        width: 400px;
+        height: auto;
+        bottom: -30px;
+    }
+    #chronicle-complete-logo-header{
+        padding-top: 0 !important;
+        width: 400px;
+        height: auto;
+        top: -30px;
+    }
+    #x-header-icn {
+        display: block;
+    }
+}
+@media (max-width:767px) {
+    #cybereason-logo-header{
+        width: 250px;
+        height: auto;
+        bottom: -15px;
+    }
+    #chronicle-complete-logo-header{
+        width: 250px;
+        height: auto;
+        top: -15px;
+    }
+    #x-header-icn {
+        font-size: 2.5em;
+        display: block;
+    }
+}

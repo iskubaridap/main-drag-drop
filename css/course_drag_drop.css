@@ -1,0 +1,163 @@
+#main {
+  background-color:transparent !important;
+}
+
+.next-page-row, .next-page-btn, .click-appear-text, .drag-drop-img-wrap, #drop-message, #drag-drop-btn {
+  display:none;
+}
+
+.draggable-table {
+  display:table;
+}
+
+.draggable-table > div {
+  display:table-row;
+}
+
+.draggable-table > div > div {
+  display:table-cell;
+  vertical-align:middle;
+  width:100%;
+}
+
+.draggable-text {
+  padding-right:30px;
+  margin-bottom:0;
+}
+
+#drop-message {
+  margin-left:-12px;
+  margin-right:-20px;
+  padding:20px;
+  position:absolute;
+  z-index:10;
+}
+
+#drop-message-notice {
+  margin-top:0;
+  margin-bottom:15px;
+}
+
+.draggable-section, .droppable-wrap {
+  padding-top:10px;
+  padding-bottom:10px;
+  height: 100%;
+}
+
+.drag-drop-page-title {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.draggable-text {
+  padding-top:15px;
+  padding-bottom:15px;
+  padding-right:15px;
+}
+
+.draggable-item-wrap, .draggable-item {
+  width:60px;
+  height:60px;
+  background-color:transparent;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:60px 60px;
+}
+
+.draggable-item-wrap {
+  background-image:url(../img/img-question-mark-gray-light.svg);
+}
+
+.draggable-item {
+  cursor:pointer;
+  background-image:url(../img/img-question-mark-yellow.svg);
+}
+
+.droppable-wrap {
+  margin-left:auto;
+  margin-right:auto;
+  width:270px;
+  position:relative;
+}
+
+#drag-drop-btn {
+  padding:0 20px;
+  width:100%;
+  position:absolute;
+  z-index:10px;
+  bottom:0;
+  left:0;
+}
+
+.antivirus-logo, .drop-item {
+  position:absolute;
+  width:270px;
+  height:270px;
+}
+
+.drop-item {
+  top:20px;
+  z-index:5;
+}
+
+.antivirus-logo {
+  bottom:20px;
+}
+
+.next-page-btn {
+}
+
+.drag-item {
+  cursor:pointer;
+}
+
+.draggable-table {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.draggable-table hr {
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+}
+
+.drag-holder {
+  position:relative;
+}
+
+#bg-image {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.dark-bg {
+  /* background-image:url(../img/dark-bg.png); */
+  background-color: black;
+  background-repeat:repeat;
+  background-size:cover;
+  background-position:left bottom;
+}
+
+.yellow-text, .selected {
+  color:#F5C714;
+}
+
+.gray-text {
+  color:#B1BABF;
+}
+
+.bg-gray{
+  background-color: #BFBFBF;
+  height: 100%;
+}
+
+.bg-red{
+  background-color: brown;
+}
+

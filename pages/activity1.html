@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/activity.css">
+    <link rel="stylesheet" href="../css/activity1.css">
+</head>
+<body id="body-orange-bg">
+    <div id="page-info" class="dont-display">
+        <p class="extra-title"><strong>Page Info</strong></p>
+        <div class="page-info-item"><span class="page-info-title"><strong>Title</strong></span>
+            <p class="page-info-txt" data-info="title">Page 1</p>
+        </div>
+        <div class="page-info-item"><span class="page-info-title"><strong>Description</strong><br></span>
+            <p class="page-info-txt" data-info="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel porttitor est. Quisque neque ex, pharetra vel metus nec, dapibus facilisis magna.</p>
+        </div>
+    </div>
+    <!-- <audio id="audio">
+        <source src="../media/audio/sample.mp3" type="audio/mpeg">
+    </audio> -->
+    <div id="transcript-text-wrapper" class="dont-display">
+        <p class="extra-title"><strong>Transcript Text</strong></p>
+        <div id="transcript-text">
+            <p>No narration.</p>
+        </div>
+    </div>
+    
+    <div class="container-fluid ps-5 pe-5">
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <h1 id="activity-title" class="white-txt">Activity Title</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-none d-sm-none d-md-none d-lg-block mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-10">
+                <div id="page-activity-draggable-wrap">
+                    <div class="drag-elem-group">
+                        <div class="drag-elem-wrap" data-item="item-1">
+                            <div class="draggable ui-draggable ui-draggable-handle" data-draggable="item-1" data-finished="false" data-result="incorrect" data-ans="before">
+                                <div class="draggable-txt-wrap">
+                                    <p class="draggable-txt large-font">Item 1 Before</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drag-elem-wrap" data-item="item-2">
+                            <div class="draggable ui-draggable ui-draggable-handle" data-draggable="item-2" data-finished="false" data-result="incorrect" data-ans="before">
+                                <div class="draggable-txt-wrap">
+                                    <p class="draggable-txt large-font">Item 2 Before</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drag-elem-wrap" data-item="item-3">
+                            <div class="draggable ui-draggable ui-draggable-handle" data-draggable="item-3" data-finished="false" data-result="incorrect" data-ans="before">
+                                <div class="draggable-txt-wrap">
+                                    <p class="draggable-txt large-font">Item 3 Before</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drag-elem-group mt-3">
+                        <div class="drag-elem-wrap" data-item="item-4">
+                            <div class="draggable ui-draggable ui-draggable-handle" data-draggable="item-4" data-finished="false" data-result="incorrect" data-ans="after">
+                                <div class="draggable-txt-wrap">
+                                    <p class="draggable-txt large-font">Item 4 After</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drag-elem-wrap" data-item="item-5">
+                            <div class="draggable ui-draggable ui-draggable-handle" data-draggable="item-5" data-finished="false" data-result="incorrect" data-ans="after">
+                                <div class="draggable-txt-wrap">
+                                    <p class="draggable-txt large-font">Item 5 After</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drag-elem-wrap" data-item="item-6">
+                            <div class="draggable ui-draggable ui-draggable-handle" data-draggable="item-6" data-finished="false" data-result="incorrect" data-ans="after">
+                                <div class="draggable-txt-wrap">
+                                    <p class="draggable-txt large-font">Item 6 After</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ps-5 pe-5 mt-4">
+        <div class="row">
+            <div class="col">
+                <div id="question-wrap"></i>
+                    <div id="question-txt" class="text-center">
+                        <div id="question-start" class="question-txt-wrap active">
+                            <p class="biggest-font white-txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ea blanditiis consequuntur cum ratione mollitia debitis ab ex velit laudantium?
+                            </p>
+                            <p class="biggest-font yellow-txt">
+                                Drag each statement to the correct bucket.
+                            </p>
+                            <p class="biggest-font white-txt">
+                                This activity will not be graded.
+                            </p>
+                        </div>
+                        <div id="question-no-answer" class="question-txt-wrap">
+                            <p class="biggest-font white-txt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ea blanditiis consequuntur cum ratione mollitia debitis ab ex velit laudantium?
+                            </p>
+                            <p class="biggest-font yellow-txt">
+                                Please Drag each statement to the correct bucket.
+                            </p>
+                            <p class="biggest-font white-txt">
+                                This activity will not be graded.
+                            </p>
+                        </div>
+                        <div id="question-incorrect" class="question-txt-wrap">
+                            <p class="biggest-font white-txt">
+                                <span class="yellow-txt">Not quite!</span> Tap &lsquo;reset&lsquo; if you&lsquo;d like to try again.
+                            </p>
+                            <p class="biggest-font white-txt">
+                                Short on time? Tap &lsquo;show me&lsquo; to go straight to the correct answers. This activity is not graded.
+                            </p>
+                        </div>
+                        <div id="question-correct" class="question-txt-wrap">
+                            <p class="biggest-font white-txt">
+                                Correct! Tap the next arrow when you&lsquo;re ready to continue.
+                            </p>
+                        </div>
+                        <div id="question-show-me" class="question-txt-wrap">
+                            <p class="biggest-font white-txt">
+                                Tap the next arrow when you&lsquo;re ready to continue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="drag-drop-container" class="container-fluid d-none d-sm-none d-md-none d-lg-block mt-5">
+        <div class="row">
+            <div class="col-2 d-flex justify-content-center">
+                <div id="drag-drop-quiz-reset" class="quiz-try-again active response-btns"><span>Reset</span></div>
+            </div>
+            <div class="col-8">
+                <div id="page-activity-droppable-wrap" class="d-flex justify-content-center align-items-end">
+                    <div class="droppable-divider"></div>
+                    <div class="droppable-item-wrap d-flex align-items-end">
+                        <div class="droppable-item-content"><i class="glyphicon bi-dot check-x-mark-icon-dd"></i>
+                            <div class="droppable ui-droppable" data-droppable="item-1" data-ans="before"></div>
+                            <p class="droppable-txt text-center yellow-txt">Before</p>
+                        </div>
+                    </div>
+                    <div class="droppable-divider"></div>
+                    <div class="droppable-item-wrap d-flex align-items-end">
+                        <div class="droppable-item-content"><i class="glyphicon bi-dot check-x-mark-icon-dd"></i>
+                            <div class="droppable ui-droppable" data-droppable="item-2" data-ans="after"></div>
+                            <p class="droppable-txt text-center yellow-txt">After</p>
+                        </div>
+                    </div>
+                    <div class="droppable-divider"></div>
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+                <div id="drag-drop-submit-wrap">
+                    <div id="drag-drop-response-wrap" class="d-none">
+                        <div class="no-response answer-response-txt drag-drop-txt-wrap">
+                            <p class="large-font text-center">
+                                Please Drag Chronicle logo and Drop it below the endpoint.
+                            </p>
+                        </div>
+                        <div class="incorrect-response answer-response-txt drag-drop-txt-wrap">
+                            <p class="large-font text-center">
+                                Not Quite!
+                            </p>
+                        </div>
+                        <div class="correct-response answer-response-txt drag-drop-txt-wrap">
+                            <p class="large-font text-center">
+                                Great job! Google Chronicle can see into all of these endpoints and more!
+                            </p>
+                            <p class="large-font text-center yellow-txt">
+                                Tap the Next button when you&lsquo;re ready to continue.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="drag-drop-submit-btn-wrap">
+                        <div id="drag-drop-quiz-submit" class="quiz-submit active response-btns"><span>Submit</span></div>
+                        <!-- <div id="drag-drop-quiz-try-again" class="quiz-try-again response-btns"><span>Try Again</span></div> -->
+                        <div id="drag-drop-quiz-defend" class="quiz-next response-btns"><span>Next</span></div>
+                        <div id="drag-drop-quiz-show-me" class="quiz-show-me response-btns"><span>Show Me</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-sm-block d-md-block d-lg-none">
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+                <div id="page-activity-dropdown-wrap"></div>
+                <div id="dropdown-response-wrap" class="d-none">
+                    <div class="no-response answer-response-txt drag-drop-txt-wrap">
+                        <p class="large-font text-center">
+                            Please Drag Chronicle logo and Drop it below the endpoint.
+                        </p>
+                    </div>
+                    <div class="incorrect-response answer-response-txt drag-drop-txt-wrap">
+                        <p class="large-font text-center">
+                            Not Quite!
+                        </p>
+                    </div>
+                    <div class="correct-response answer-response-txt drag-drop-txt-wrap">
+                        <p class="large-font text-center">
+                            Great job! Google Chronicle can see into all of these endpoints and more!
+                        </p>
+                        <p class="large-font text-center yellow-txt">
+                            Tap the Next button when you&lsquo;re ready to continue.
+                        </p>
+                    </div>
+                </div>
+                <div id="dropdown-submit-btn-wrap">
+                    <div id="dropdown-quiz-reset" class="btn yellow quiz-try-again active response-btns"><span>Reset</span></div>
+                    <div id="dropdown-quiz-submit" class="btn yellow quiz-submit active response-btns"><span>Submit</span></div>
+                    <div id="dropdown-quiz-defend" class="btn yellow quiz-next response-btns"><span>Next</span></div>
+                    <div id="dropdown-quiz-show-me" class="btn yellow quiz-show-me response-btns"><span>Show Me</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/activity1.js"></script>
+    <script src="../js/custom-code.js"></script>
+    <script src="../js/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+:root {
+    --lightgray: #EEEEEE;
+    --white: #ffffff;
+    --blue: #0e2438;
+    --gray: #575854;
+  }
+
+.yellow-dash{
+    background-color: var(--yellow);
+    padding: 0 0;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 15%;
+    height: 6px;
+    margin-top: 20px;
+    right: 0;
+}
+
+.yellow-dash2{
+    background-color: var(--yellow);
+    padding: 0 0;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+    height: 10px;
+    margin-top: 20px;
+    right: 0;
+}
+
+.yellow-dash3{
+    background-color: var(--yellow);
+    padding: 0 0;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 60%;
+    height: 10px;
+    margin-top: 20px;
+    right: 0;
+}
+
+.bg-light-gray{
+    background-color: var(--lightgray);
+}
+
+.bg-white{
+    background-color: var(--white);
+    padding: 0 0;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 90%;
+    height: 200px;
+    right: 0;
+}
+
+.bg-white2{
+    background-color: var(--white);
+    padding: 0 0;
+    padding-top: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 60%;
+    height: 60px;
+    right: 0;
+}
+@font-face {
+    font-family: 'open_sans-normal';
+    src: url('opensans-bold-webfont.eot');
+    src: url('opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-bold-webfont.woff2') format('woff2'),
+         url('opensans-bold-webfont.woff') format('woff'),
+         url('opensans-bold-webfont.ttf') format('truetype'),
+         url('opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sans-italic';
+    src: url('opensans-bolditalic-webfont.eot');
+    src: url('opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-bolditalic-webfont.woff2') format('woff2'),
+         url('opensans-bolditalic-webfont.woff') format('woff'),
+         url('opensans-bolditalic-webfont.ttf') format('truetype'),
+         url('opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.heading-font{
+    /* font-family: open_sans-normal; */
+    color: var(--gray);
+    padding-top: 20px;
+}
+
+.sub-heading{
+    font-size: 25px;
+    color: var(--gray);
+}
+
+@media (min-width:1200px) {
+    .paragraph{
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    .bg-white{
+        width: 90%;
+        height: 200px;
+    }
+    .title_header_sub{
+        padding-top: 460px; 
+        padding-left: 550px;
+    }
+    .bg-arrowblue{
+        width: 40px;
+    }
+    .content-page5{
+        padding-top: 100px;
+    }
+    .content-page6{
+        padding-top: 100px;
+    }
+  }
+
+  @media (max-width:1199px) {
+    .paragraph{
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    .bg-white{
+        width: 90%;
+        height: 200px;
+    }
+    .title_header_sub{
+        padding-top: 300px; 
+        padding-left: 400px;
+    }
+  }
+
+
+  
+  @media (max-width:991px) {
+    .paragraph{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .bg-white{
+        width: 90%;
+        height: 180px;
+    }
+    .img-yellow-diamond{
+        width:40px;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 1px !important;
+  }
+  .title_header_sub{
+    padding-top: 220px; 
+    padding-left: 300px;
+    }
+}
+
+
+  @media (max-width:767px) {
+    .paragraph{
+        font-size: 9px;
+        padding-left: 10px;
+    }
+    .img-yellow-diamond{
+        width:40px;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: -10px !important;
+    }
+    .title_header_sub{
+        padding-top: 140px; 
+        padding-left: 210px;    
+    }
+    .heading-font-page6{
+        /* font-family: open_sans-normal; */
+        color: var(--gray);
+        padding-top: 20px;
+        padding-left: 180px !important;
+    }
+    
+    .sub-heading-page6{
+        font-size: 20px;
+        color: var(--gray);
+        padding-left: 180px !important;
+    }
+    .yellow-dash-page6{
+        margin-left: 180px !important;
+    }
+    .content-page5{
+        padding-top: 3px;
+        font-size: 14px;
+    }
+    .content-page6{
+        padding-left: 190px !important;
+        padding-top: 2px;
+    }
+}
+
+  .bg-arrowblue-r{
+    /* background-color: var(--blue); */
+    background-image: url('../img/icons/arrow-blue-right.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+  }
+
+  .bg-arrowblue-l{
+    /* background-color: var(--blue); */
+    background-image: url('../img/icons/arrow-blue-left.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+  }
+
+  
+  .bg-arrowgray-r{
+    /* background-color: var(--blue); */
+    background-image: url('../img/icons/arrow-gray-right.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+  }
+
+  .bg-arrowgray-l{
+    /* background-color: var(--blue); */
+    background-image: url('../img/icons/arrow-gray-left.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+  }
+
+ol li::before{
+ color: #FFC628;
+}
+
+ol li { color: #FFC628; }
+.li-text { color: #595955; }
+
+.button_cr{
+    background-color: #FFC628;
+    border: none;
+    color: #595955;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    margin-top: -100px;
+  }
+
+  .button_cr:hover {
+    background-color: #595955; 
+    color: #FFC628;
+  }

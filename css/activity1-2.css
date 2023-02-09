@@ -1,0 +1,144 @@
+#page-activity-draggable-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 79px;
+    height: 100px;
+}
+#page-activity-draggable-wrap > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.drag-elem-wrap {
+    z-index: 2;
+}
+#chronicle-logo-placeholder {
+    z-index: 1;
+}
+#cybereason-logo-header,
+#chronicle-complete-logo-header {
+    position: relative;
+}
+#x-header-icn {
+    font-size: 5em;
+    vertical-align: top;
+}
+.droppable-img {
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+.droppable-item-wrap {
+    text-align: center;
+    min-height: 300px;
+    background-color: unset;
+    border: unset;
+}
+.droppable-txt {
+    margin-bottom: 0;
+}
+.droppable-item-content {
+    width: 100%;
+}
+#page-activity-droppable-wrap .droppable {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 0;
+    background-color: #3c3c3c;
+}
+#drag-drop-response-wrap {
+    min-height: 80px;
+}
+@media (min-width:1200px) {
+    #cybereason-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    #chronicle-complete-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    .draggable-chronicle-logo,
+    .draggable-chronicle-logo {
+        width: auto;
+        height: 100px;
+    }
+    .droppable-item-wrap {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 200px;
+        height: 420px;
+    }
+    #page-activity-droppable-wrap .droppable {
+        min-height: unset;
+        height: 150px;
+    }
+}
+@media (max-width:1199px) {
+    #cybereason-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    #chronicle-complete-logo-header{
+        width: 400px;
+        height: auto;
+    }
+    .draggable-chronicle-logo {
+        width: auto;
+        height: 75px;
+    }
+    .droppable-img {
+        max-width: 140px;
+        height: auto;
+    }
+    .droppable-item-wrap {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 150px;
+        height: 345px;
+    }
+    #page-activity-droppable-wrap .droppable {
+        min-height: unset;
+        height: 100px;
+    }
+    .droppable-img {
+        max-width: 140px;
+        height: auto;
+    }
+}
+@media (max-width:991px) {
+    #cybereason-logo-header{
+        padding-bottom: 0 !important;
+        width: 400px;
+        height: auto;
+        bottom: -30px;
+    }
+    #chronicle-complete-logo-header{
+        padding-top: 0 !important;
+        width: 400px;
+        height: auto;
+        top: -30px;
+    }
+    #x-header-icn {
+        display: block;
+    }
+}
+@media (max-width:767px) {
+    #cybereason-logo-header{
+        width: 250px;
+        height: auto;
+        bottom: -15px;
+    }
+    #chronicle-complete-logo-header{
+        width: 250px;
+        height: auto;
+        top: -15px;
+    }
+    #x-header-icn {
+        font-size: 2.5em;
+        display: block;
+    }
+}

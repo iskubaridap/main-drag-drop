@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Understand_Cloud_Architecture</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/understand_cloud_architecture.css">
+
+    <style>
+        #img-sub {
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 200px;
+            border-radius: 10px;
+            background-color: var(--yellow);
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 7em;
+            text-transform: uppercase;
+            box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
+        }
+    </style>
+</head>
+
+<body id="body-orange-bg">
+    <div id="page-info" class="dont-display">
+        <p class="extra-title"><strong>Page Info</strong></p>
+        <div class="page-info-item"><span class="page-info-title"><strong>Title</strong></span>
+            <p class="page-info-txt" data-info="title">Page 3</p>
+        </div>
+        <div class="page-info-item"><span class="page-info-title"><strong>Description</strong><br></span>
+            <p class="page-info-txt" data-info="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel porttitor est. Quisque neque ex, pharetra vel metus nec, dapibus facilisis magna.</p>
+        </div>
+    </div>
+    <audio id="audio">
+        <source src="../media/audio/blank.mp3" type="audio/mpeg">
+    </audio>
+    <div id="transcript-text-wrapper" class="dont-display">
+        <p class="extra-title"><strong>Transcript Text</strong></p>
+        <div id="transcript-text">
+            <p>Collaboration SaaS solutions work together. Sometimes known as Long Tail SaaS, these applications include messenger apps, virtual meeting services, industry-based social media platforms and back office applications.</p>
+        </div>
+    </div>
+    
+    <div class="content section-page">
+        <div id="wrapper">
+            <div id="main">
+                <div class="wrap-section no-padding">
+                    <div id="bodyContainer">
+                        <div class="container-fluid" style="padding-top: 15px; padding-bottom: 25px;">
+                            <div class="row">
+                                <div class="col">
+                                    <span id="reset-drag-drop-btn" class="btn btn-clean yellow">Reset</span>
+                                </div>
+                            </div>
+                            <div class="row zIndex1 draggable-area">
+                                <div class="col">
+                                    <div class="drag-items-wrap">
+                                        <div class="drag-item-wrap" data-icon="google-drive" data-value="incorrect">
+                                            <div class="drag-item icon-brand icon-brand-google-drive" data-icon="google-drive" data-value="incorrect">
+                                                <div class="drag-item-info" data-text="Lorem ipsum dolor sit amet, hendrerit amet ut, sit cursus augue turpis, praesent sodales venenatis proin"><span>i</span></div>
+                                                <div class="drag-item-info-resources"></div>
+                                                <div class="text-middle">
+                                                    <div>
+                                                        <div>
+                                                            <div class="submit-response-drag" data-correct="You got this one right." data-incorrect="Lorem ipsum dolor sit amet, hendrerit amet ut"></div><span class="drag-item-text dont-display">Incorrect</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drag-item-wrap" data-icon="azure" data-value="correct">
+                                            <div class="drag-item icon-brand icon-brand-azure" data-icon="azure" data-value="correct">
+                                                <div class="drag-item-info" data-text="In libero aliquam vitae curabitur porttitor nec. Sit suspendisse mauris vel sodales eget"><span>i</span></div>
+                                                <div class="drag-item-info-resources"></div>
+                                                <div class="text-middle">
+                                                    <div>
+                                                        <div>
+                                                            <div class="submit-response-drag" data-correct="You got this one right." data-incorrect="Sit cursus augue turpis, praesent sodales venenatis proin, in libero aliquam"></div><span class="drag-item-text dont-display">Correct</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drag-item-wrap" data-icon="github" data-value="incorrect">
+                                            <div class="drag-item icon-brand icon-brand-github" data-icon="github" data-value="incorrect">
+                                                <div class="drag-item-info" data-text="Leo mollis. Rutrum nulla, ad ac velit lectus risus posuere. Neque nulla lorem"><span>i</span></div>
+                                                <div class="drag-item-info-resources"></div>
+                                                <div class="text-middle">
+                                                    <div>
+                                                        <div>
+                                                            <div class="submit-response-drag" data-correct="You got this one right." data-incorrect="Lorem ipsum dolor sit amet, hendrerit amet ut"></div><span class="drag-item-text dont-display">Incorrect</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drag-item-wrap" data-icon="workday" data-value="correct">
+                                            <div class="drag-item icon-brand icon-brand-workday" data-icon="workday" data-value="correct">
+                                                <div class="drag-item-info" data-text="Id nihil nec et erat, magna ligula lacus at metus hendrerit, donec ultricies vestibulum vitae ipsum euismod"><span>i</span></div>
+                                                <div class="drag-item-info-resources"></div>
+                                                <div class="text-middle">
+                                                    <div>
+                                                        <div>
+                                                            <div class="submit-response-drag" data-correct="You got this one right." data-incorrect="Sit cursus augue turpis, praesent sodales venenatis proin, in libero aliquam"></div><span class="drag-item-text dont-display">Correct</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drag-item-wrap" data-icon="dropbox" data-value="incorrect">
+                                            <div class="drag-item icon-brand icon-brand-dropbox" data-icon="dropbox" data-value="incorrect">
+                                                <div class="drag-item-info" data-text="Nulla erat sed mauris netus dolor placerat. Suspendisse massa ut"><span>i</span></div>
+                                                <div class="drag-item-info-resources"></div>
+                                                <div class="text-middle">
+                                                    <div>
+                                                        <div>
+                                                            <div class="submit-response-drag" data-correct="You got this one right." data-incorrect="Lorem ipsum dolor sit amet, hendrerit amet ut"></div><span class="drag-item-text dont-display">Incorrect</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drag-item-wrap" data-icon="gmail" data-value="correct">
+                                            <div class="drag-item icon-brand icon-brand-gmail" data-icon="gmail" data-value="correct">
+                                                <div class="drag-item-info" data-text="Dapibus nibh lorem interdum, litora enim ligula vel ac. Sed elit quisque et, mauris dolor, nunc nisl posuere curae ac saepe"><span>i</span></div>
+                                                <div class="drag-item-info-resources"></div>
+                                                <div class="text-middle">
+                                                    <div>
+                                                        <div>
+                                                            <div class="submit-response-drag" data-correct="You got this one right." data-incorrect="Lorem ipsum dolor sit amet, hendrerit amet ut"></div><span class="drag-item-text dont-display">Correct</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row zIndex0">
+                                <div class="col">
+                                    <span id="img-sub">Img</span>
+                                </div>
+                            </div>
+                            <div class="row zIndex0 droppable-area">
+                                <div class="col">
+                                    <div class="drop-select-wrap"></div>
+                                    <div class="drop-items-wrap" data-value="correct">
+                                        <div class="drop-item" data-value="">
+                                            <div class="submit-response-drop" data-missing="Lorem ipsum dolor sit amet, hendrerit amet ut"></div>
+                                        </div>
+                                        <div class="drop-item" data-value="">
+                                            <div class="submit-response-drop" data-missing="Lorem ipsum dolor sit amet, hendrerit amet ut"></div>
+                                        </div>
+                                        <div class="drop-item" data-value="">
+                                            <div class="submit-response-drop" data-missing="Lorem ipsum dolor sit amet, hendrerit amet ut"></div>
+                                        </div>
+                                        <div class="drop-item" data-value="">
+                                            <div class="submit-response-drop" data-missing="Lorem ipsum dolor sit amet, hendrerit amet ut"></div>
+                                        </div>
+                                        <div class="drop-item" data-value="">
+                                            <div class="submit-response-drop" data-missing="Lorem ipsum dolor sit amet, hendrerit amet ut"></div>
+                                        </div>
+                                        <div class="drop-item" data-value="">
+                                            <div class="submit-response-drop" data-missing="Lorem ipsum dolor sit amet, hendrerit amet ut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><span id="submit-drag-drop-btn" class="btn btn-clean yellow">Submit</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="resource-info-wrap">
+            <div class="row">
+                <div class="col">
+                    <div id="resource-info-box">
+                        <div id="resource-info-close-btn"><span>X</span></div>
+                        <div id="resource-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/quiz.js"></script>
+    <script src="../js/understand_cloud_architecture.js"></script>
+    <script src="../js/custom-code.js"></script>
+    <script src="../js/init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body class="bg-hexagon-lines">
+    <div id="page-info" class="dont-display">
+        <p class="extra-title"><strong>Page Info</strong></p>
+        <div class="page-info-item"><span class="page-info-title"><strong>Title</strong></span>
+            <p class="page-info-txt" data-info="title">Last Page</p>
+        </div>
+        <div class="page-info-item"><span class="page-info-title"><strong>Description</strong><br></span>
+            <p class="page-info-txt" data-info="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel porttitor est. Quisque neque ex, pharetra vel metus nec, dapibus facilisis magna.</p>
+        </div>
+    </div>
+    <div id="transcript-text-wrapper" class="dont-display">
+        <p class="extra-title"><strong>Transcript Text</strong></p>
+        <div id="transcript-text">
+            <p>No narration.</p>
+        </div>
+    </div>
+    <!-- <audio id="audio">
+        <source src="../media/audio/blank.mp3" type="audio/mpeg">
+    </audio> -->
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="biggest-font" style="margin-bottom: 0">Quiz Results </h1>
+                <div class="blue-underline-bar mb-3"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div id="info-result" class="pe-lg-5 pe-md-3 pe-sm-4 ps-sm-4 pe-5 ps-5">
+                    <p class="biggest-font mb-0">Accuracy: <span id="accuracy" style="float:right">0 </span></p>
+                    <div class="gray-underline-bar mb-2"></div>
+                    <p class="biggest-font mt-5 mb-0">Attempts: <span id="attempts" style="float:right">1 </span></p>
+                    <div class="gray-underline-bar"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div id="notification" class="large-font ps-lg-5 ps-md-3 pe-sm-4 ps-sm-4 pe-5 ps-5">
+                    <p id="fail-notification" class="d-none ">Sorry, you did not pass the quiz. If you do not want to retake the quiz at this time, close the class by selecting the "close" button and return to it at a later time. You will not be able to move on to the next class or module until you have passed this quiz.</p>
+                    <p id="pass-notification" class="d-none">Congratulations, you passed the quiz. To Exit this course and receive completion, select the close button below.  This will bring you back to your curriculum so you can launch your next course.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col text-center">
+                <div id="continue-review">
+<!--
+                    <button type="button" aria-label="Retake" id="retake-btn" class="large-font d-none btn yellow m-2">Retake</button>
+                    <button type="button" aria-label="Review" id="review-btn" class="large-font d-none btn yellow m-2">Review</button>
+-->
+                    <button type="button" aria-label="Close" id="close-btn" class="large-font btn yellow m-2">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/quiz.js"></script>
+    <script src="../js/custom-code.js"></script>
+    <script src="../js/init.js"></script>
+</body>
+
+</html>

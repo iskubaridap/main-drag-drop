@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation_Kit_Fallout</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course_drag_drop.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body id="pageWrapper">
+    <style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="page5.mp3" type="audio/mpeg" data-default="page5.mp3">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>Here are some questions aimed at tripping up Netskope.&nbsp; </p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main" style="background-color: transparent">
+                <div class="wrap-section no-padding">
+                    <div id="bodyContainer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-7 bg-gray percentByHeight" data-desktop-height="100" data-tablet-height="100" data-mobile-height="50">
+                                    <div class="draggable-section">
+                                        <h2 class="drag-drop-page-title">Trap-Setting Questions </h2>
+                                        <p><em>Drag the question mark icon from each question to the placeholder in the trap to see which methods work and which ones don't.&nbsp;</em> </p>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, dignissimos? </p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="1">
+                                                    <div class="drag-item draggable-item" data-audio="page5-1.mp3" data-value="1" data-title="Good Trap!" data-content="Netskope requires users to install a client on all the machines that they want to control. Customers don’t want another agent, and how do they control unmanaged machines?"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, illum! Cupiditate ipsum distinctio dolor ipsam. </p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="2">
+                                                    <div class="drag-item draggable-item" data-value="2" data-title="Not quite..." data-content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi voluptatibus itaque distinctio inventore! Mollitia, nihil quasi soluta quos iure voluptas."></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">How does your team track false positives?</p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="3">
+                                                    <div class="drag-item draggable-item" data-value="3" data-title="Good Trap!" data-content="Netskope doesn’t allow the user to mark an incident as a false positive during review. This question will remind the client of that fact."></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, est? </p>
+                                                    <p class="large-font draggable-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, pariatur?</p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="4">
+                                                    <div class="drag-item draggable-item" data-value="4" data-title="Good Trap!" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut fugit blanditiis itaque laborum velit voluptatem vel quos pariatur fuga."></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-5">
+                                    <div id="drop-message" class="bg-red">
+                                        <h2 id="drop-message-notice">Heading</h2>
+                                        <p id="drop-message-text" class="large-font">Paragraph</p>
+                                        <div class="text-center"><span id="continue-btn" class="btn transparent">Continue</span></div>
+                                    </div>
+                                    <div class="droppable-wrap percentByHeight" data-desktop-height="100" data-tablet-height="100" data-mobile-height="100">
+                                        <div class="drop-item"><img src="../img/img-cage.svg"></div>
+                                        <div class="antivirus-logo"><img src="../img/img-ms-netskope-avast.svg"></div>
+                                    </div>
+                                    <div id="drag-drop-btn"><span class="btn red reset-drag-btn">Reset</span><span class="btn red pull-right next-page">Next</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="bg-image" class="dark-bg"></div> -->
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/wrapper2.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+</body>
+
+</html>

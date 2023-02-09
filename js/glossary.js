@@ -1,0 +1,19 @@
+var glossary = new Object();
+glossary.menu = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.toc = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.resources = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.glossary = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.closedCaption = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.play = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.pause = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.mute = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.unmute = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.pageProgress = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+glossary.resetScreen = "Lorem ipsum dolor sit amet, aliquet commodo nec feugiat vestibulum";
+
+glossary.diathermy = "A medical and surgical technique involving the production of heat in a part of the body by high-frequency electric currents, to stimulate the circulation, relieve pain, destroy unhealthy tissue, or cause bleeding vessels to clot.";
+glossary.frenulum = "The elastic band of tissue under the glans penis that connects the foreskin to the vernal mucosa, and helps contract the foreskin over the glans.";
+glossary.haemostasis = "The stopping of bleeding or arrest of blood circulation in an organ or body part.";
+glossary.ligation = "The surgical procedure of closing off a blood vessel or other duct or tube in the body by means of a ligature or clip.";
+glossary.vessel_lumen = "The inside space of the vessel.";
+glossary.occlusion = "The blockage or closing of a blood vessel or hollow organ.";

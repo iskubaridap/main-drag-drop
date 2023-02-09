@@ -1,0 +1,94 @@
+/* #page-activity-draggable-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 79px;
+    height: 100px;
+} */
+.drag-elem-wrap {
+    z-index: 2;
+}
+.droppable-item-wrap {
+    text-align: center;
+    background-color: unset;
+    border: unset;
+}
+.droppable-txt {
+    margin-bottom: 0;
+}
+.droppable-item-content {
+    width: 100%;
+}
+#page-activity-droppable-wrap .droppable {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 0;
+    background-color: #3c3c3c;
+}
+#drag-drop-response-wrap {
+    min-height: 80px;
+}
+.droppable-item-wrap {
+    padding: 0;
+}
+.draggable {
+    text-align: center;
+    width: 200px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drag-elem-wrap {
+    width: 200px;
+    height: 230px;
+}
+.draggable-content {
+    padding: 10px;
+    width: 100%;
+}
+.draggable-item-label {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    background-color: #3c4448;
+    border-radius: 500px;
+}
+#drag-drop-submit-btn-wrap {
+    text-align: center;
+}
+@media (min-width:1200px) {
+    .draggable-img {
+        width: 100px;
+        height: auto;
+    }
+    .droppable-item-wrap {
+        width: 200px;
+    }
+    #page-activity-droppable-wrap .droppable {
+        min-height: unset;
+        height: 230px;
+    }
+}
+@media (max-width:1199px) {
+    .draggable-img {
+        width: 100px;
+        height: auto;
+    }
+    .droppable-item-wrap {
+        width: 200px;
+    }
+    #page-activity-droppable-wrap .droppable {
+        min-height: unset;
+        height: 230px;
+    }
+}
+@media (max-width:991px) {
+    
+}
+@media (max-width:767px) {
+    
+}

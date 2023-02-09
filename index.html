@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Template</title>
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <style>
+        #course-loader {
+            display: block;
+        }
+
+        .dont-display {
+            display: none;
+        }
+        #modal-img {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            border-radius: 1000px;
+            background-color: var(--yellow);
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 7em;
+            text-transform: uppercase;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+        }
+    </style>
+
+    <div id="header-static" role="heading">
+        <div id="header-logo" role="heading">
+            <!-- <img id="header-logo-img" src="img/essentials/logo/logo-text-bottom-black.png" alt="Cybereason Logo"> -->
+            <span id="header-logo-img">Logo</span>
+            <span id="header-logo-txt"> Company Name</span>
+        </div>
+        <button id="index-btn" class="btn btn-clean" type="button" tabindex="4" aria-label="Index" title="Index"
+            aria-hidden="true">
+            <i class="bi-list"></i>
+        </button>
+    </div>
+    <section id="course-loader">
+        <div id="course-loader-wrap">
+            <p id="course-loader-txt" tabindex="1" aria-label="Course Loading">Course Loading...<br>Please Wait</p>
+        </div>
+        <img src="img/essentials/elem/menu-screen-btn.svg" alt="Menu Button" id="menu-screen-btn" class="screen-elem"
+            aria-hidden="true">
+        <img src="img/essentials/elem/seeMoreBtn.svg" alt="Image of the See More Scroll Button" id="see-more-screen-btn"
+            class="screen-elem" aria-hidden="true"><img src="img/essentials/elem/submitScreenBtn.svg" alt="Submit"
+            id="submit-screen-btn" class="screen-elem" aria-hidden="true">
+        <img src="img/essentials/elem/audio-controls.svg" alt="Audio Controls" id="audio-controls-btn"
+            class="screen-elem" aria-hidden="true">
+        <img src="img/essentials/elem/prevNextBtn.svg" alt="Image of the Next and Previous Buttons"
+            id="prev-next-screen-btn" class="screen-elem" aria-hidden="true">
+        <img src="img/essentials/elem/slideIndicator.svg" alt="Image of the Slide Indicator" id="slide-indicator-screen"
+            class="screen-elem" aria-hidden="true">
+        <img src="img/essentials/elem/slideIndicator-small.svg" alt="Image of the Slide Indicator"
+            id="slide-indicator-screen-small" class="screen-elem" aria-hidden="true">
+    </section>
+    <section id="page-content-wrap" aria-label="Content" aria-hidden="true">
+        <!-- <button class="btn yellow" type="button">Foobar</button>
+        <button class="btn transparent" type="button">Foobar</button> -->
+        <div id="page-content">
+            <!-- <h1 class="dont-display">Indicate series of pages </h1>
+            <p id="page-names" class="dont-display">video, page1-cris, page3-cris, page4-cris, page5-cris, page6-cris, page7-cris, page8-cris, true-false, flashcard, matching, persona, choice-single, choice-multiple, last-page</p>
+            <h1 class="dont-display">Indicate series of quiz pages</h1>
+            <p id="quiz-pages" class="dont-display">true-false, flashcard, matching, persona, choice-single, choice-multiple, last-page</p> -->
+            <h1 class="dont-display">Indicate series of pages </h1>
+            <p id="page-names" class="dont-display">page6, page1, page3, page4, page5, activity1, page6, drag-drop</p>
+            <h1 class="dont-display">Indicate series of quiz pages</h1>
+            <p id="quiz-pages" class="dont-display">last-page</p>
+        </div>
+    </section>
+    <div id="wrapper-transcript">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-6" id="transcript-box">
+                    <button class="btn btn-default overwrite-default-btn" type="button" id="transcript-close-btn"
+                        aria-label="Close Transcript Window" tabindex="3">X</button>
+                    <div id="transcript-show"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper-submit-btn-wrap"><button class="btn" type="button" id="wrapper-submit-btn"
+            tabindex="15">Submit</button></div>
+    <div id="progress-bar-wrapper" class="nav-footer-elems">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+    <div id="wrapper-footer">
+        <div id="footer-controls-wrap" class="nav-footer-elems">
+            <div id="footer-controls">
+                <div class="footer-btn-wrap">
+                    <button class="btn control-btn-item modal-toggle" type="button" id="closed-caption-btn" tabindex="5"
+                        aria-label="Closed Caption" title="Closed Caption" aria-hidden="true"><i
+                            class="glyphicon bi-chat-left-text-fill"></i></button>
+                </div>
+                <div class="footer-btn-wrap">
+                    <button class="btn control-btn-item modal-toggle" type="button" id="play-btn" tabindex="6"
+                        aria-label="Play" title="Play" aria-hidden="true"><i
+                            class="glyphicon bi-play-fill"></i></button>
+                </div>
+                <div class="footer-btn-wrap d-none">
+                    <button class="btn control-btn-item modal-toggle" type="button" id="pause-btn" tabindex="7"
+                        aria-label="Pause" title="Pause" aria-hidden="true"><i
+                            class="glyphicon bi-pause-fill"></i></button>
+                </div>
+                <div class="footer-btn-wrap">
+                    <button class="btn control-btn-item modal-toggle" type="button" id="mute-btn" tabindex="8"
+                        aria-label="Mute" title="Mute" aria-hidden="true"><i
+                            class="glyphicon bi-volume-up-fill"></i></button>
+                </div>
+                <div class="footer-btn-wrap d-none">
+                    <button class="btn control-btn-item modal-toggle" type="button" id="unmute-btn" tabindex="9"
+                        aria-label="Unmute" title="Unmute" aria-hidden="true"><i
+                            class="glyphicon bi-volume-mute-fill"></i></button>
+                </div>
+                <div class="footer-btn-wrap"><button class="btn control-btn-item modal-toggle" type="button"
+                        id="reset-screen-btn" tabindex="10" aria-label="Refresh" title="Refresh" aria-hidden="true"><i
+                            class="glyphicon bi-arrow-repeat"></i></button>
+                </div>
+            </div>
+            <div id="audio-bar-wrapper">
+                <div id="audio-bar-container"><input type="range" value="0" min="0" max="100" id="audio-bar"
+                        tabindex="11" aria-label="Audio Track Slider" title="Audio Track Slider" aria-hidden="true">
+                </div>
+            </div>
+        </div>
+
+        <div id="page-indicator" class="nav-footer-elems"><span><span id="slide-txt">Slide </span><span
+                    id="page-indicator-txt">10/10</span></span></div>
+        <div id="prev-next-btn" class="nav-footer-elems">
+            <div class="footer-btn-wrap">
+                <button class="btn" type="button" id="prev-page" tabindex="12" aria-label="Previous Page"
+                    aria-hidden="true" disabled="disabled" title="Back"><i
+                        class="glyphicon bi-chevron-left"></i></button>
+            </div>
+            <div class="footer-btn-wrap">
+                <button class="btn" type="button" id="next-page" tabindex="13" aria-label="Next Page" aria-hidden="true"
+                    title="Next"><i class="glyphicon bi-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="nav-overlay" tabindex="-1" aria-labelledby="Modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <span id="modal-logo">Logo</span>
+                    <!-- <img id="modal-logo" src="./img/essentials/logo/logo-text-bottom-white.png"> -->
+                    <!-- <p class="modal-title text-center" id="exampleModalLabel">Modal title</p> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 col-xs-12">
+                                <!-- <p class="biggest-font text-center">Use the menu on the right to navigate to each section.</p> -->
+                                <p class="large-font text-center">Lorem ipsum dolor sit amet, adipiscing ac nec faucibus est</p>
+                                <span id="modal-img">Img</span>
+                                <p class="text-center">Etiam nibh, libero libero vestibulum eu dolor</p>
+                            </div>
+                            <div class="col-md-6 col-xs-12 text-xs-end">
+                                <button data-page="" type="button" data-bs-dismiss="modal"
+                                    class="btn white main-menu-link text-uppercase">Lorem ipsum dolor sit</button>
+                                <button data-page="" type="button" data-bs-dismiss="modal"
+                                    class="btn white main-menu-link text-uppercase">Lorem ipsum dolor sit</button>
+                                <button data-page="" type="button" data-bs-dismiss="modal"
+                                    class="btn white main-menu-link text-uppercase">Lorem ipsum dolor sit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn yellow" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn transparent">Save changes</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="video-modal" tabindex="-1" aria-labelledby="Modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- <div class="modal-header text-center"></div> -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col position-relative">
+                                <button id="wrapper-video-close-btn" type="button" class="btn-close"
+                                    data-bs-dismiss="modal" aria-label="Close"><i class="bi-x-lg"></i></button>
+                                <video id="wrapper-video" width="400" controls controlsList="nodownload">
+                                    <source src="" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <script src="./lms/APIConstants.js"></script>
+    <script src="./lms/Configuration.js"></script>
+    <script src="./lms/API.js"></script>
+    <script src="./lms/NONEFunctions.js"></script>
+    <script src="./lms/SCORMDiscovery.js"></script>
+    <script src="./lms/UtilityFunctions.js"></script>
+    <script src="./lms/SCORM2004Functions.js"></script> -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.main.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/wrapper.js"></script>
+    <!-- <script src="./js/wrapper2.js"></script>
+    <script src="./js/wrapper3.js"></script>
+    <script src="./js/wrapper4.js"></script> -->
+    <script src="./js/page.js"></script>
+    <script src="./js/quiz.js"></script>
+    <script src="./js/custom-code.js"></script>
+    <script src="./js/init.js"></script>
+</body>
+
+</html>
