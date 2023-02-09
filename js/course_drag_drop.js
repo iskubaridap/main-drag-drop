@@ -4,7 +4,7 @@ var cageReady = true;
 
 function playAudio(audioPath)
 {
-    audioStop();
+    /* audioPause();
     $('#audio source').eq(0).attr("src",'');
     $('#audio source').eq(0).attr("src",(parent.audioPath + audioPath));
     audio.load();
@@ -18,7 +18,8 @@ function playAudio(audioPath)
         audio.play();
     });
     //audioPlay();
-    parent.showPauseBtn();
+    parent.showPauseBtn(); */
+    audioPlay();
 }
 function reset()
 {
@@ -31,7 +32,7 @@ function reset()
     $('#drag-drop-btn').hide();
 }
 $("#resource-info-close-btn").off("click").on("click",function(){
-    audioStop();
+    audioPause();
     $("#resource-info-wrap").fadeOut();
 });
 $('.reset-drag-btn').off().on('click', function(){
@@ -56,7 +57,7 @@ $('#continue-btn').off().on('click', function(){
             $(this).removeClass('selected').addClass('gray-text');
         }
     });
-    audioStop();
+    audioPause();
 });
 $('.click-appear-icon').each(function(){
     $(this).off().on('click', function(){
