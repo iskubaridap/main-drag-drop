@@ -31,6 +31,7 @@
   padding:20px;
   position:absolute;
   z-index:10;
+  color: #fff;
 }
 
 #drop-message-notice {
@@ -104,8 +105,8 @@
   bottom:20px;
 }
 
-.next-page-btn {
-}
+/* .next-page-btn {
+} */
 
 .drag-item {
   cursor:pointer;
@@ -161,3 +162,6 @@
   background-color: brown;
 }
 
+.text-brown{
+  color: brown;
+}
