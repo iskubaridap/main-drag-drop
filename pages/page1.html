@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Document</title>
     <link rel="stylesheet" href="../css/main.css">
+    
     <style>
         #tmp-logo {
             display: flex;
@@ -23,7 +24,10 @@
             box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
         }
     </style>
+
 </head>
+
+
 
 <body id="body-orange-bg">
     <div id="page-info" class="dont-display">
@@ -52,7 +56,7 @@
                     <span id="tmp-logo">Img</span>
                 </div>
                 <div class="col-md-6 col-sm-6" style="margin-top: 10%;">
-                    <h1 class="text-uppercase white-txt" id="title-text" style="text-shadow: 4px 4px rgba(0,0,0,0.75);"><strong>Lorem ipsum dolor sit</strong></h1>
+                    <h1 class="text-uppercase white-txt " id="title-text" style="text-shadow: 4px 4px rgba(0,0,0,0.75);"><strong><span class="auto-type"></span></strong></h1>
                     <p class="text-uppercase biggest-font white-txt">Amet, adipiscing ac nec faucibus est</p>
                 </div>
             </div>
@@ -71,6 +75,16 @@
     <script src="../js/quiz.js"></script>
     <script src="../js/custom-code.js"></script>
     <script src="../js/init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type",{
+        strings: ["Lorem ipsum dolor sit", "Click Next Button"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+        })
+    
+    </script>
 </body>
 
 </html>

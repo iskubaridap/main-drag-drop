@@ -29,6 +29,8 @@
   padding:20px;
   position:absolute;
   z-index:10;
+  background-color: brown;
+  color: #fff;
 }
 
 #drop-message-notice {
@@ -162,3 +164,6 @@
   background-color: brown;
 }
 
+.text-black{
+  color: #000;
+}
