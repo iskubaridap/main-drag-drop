@@ -26,6 +26,8 @@
 }
 
 #drop-message {
+  margin-left:-12px;
+  margin-right:-20px;
   padding:20px;
   position:absolute;
   z-index:10;
@@ -79,9 +81,10 @@
 }
 
 #drag-drop-btn {
+  padding:0 20px;
   width:100%;
   position:absolute;
-  z-index:10;
+  z-index:10px;
   bottom:0;
   left:0;
 }
@@ -141,12 +144,8 @@
   background-position:left bottom;
 }
 
-.yellow-text {
+.yellow-text, .selected {
   color:#F5C714;
-}
-
-.selected {
-  color: #58151c;
 }
 
 .gray-text {
