@@ -3,16 +3,22 @@
 }
 .draggable-wrap .drag-drop-table {
     padding: 15px;
-    background-color: #53565a;
+    background-color: #0f5132;
+    color: #fff;
 }
 .drag-item {
-    position: relative;
+  position: relative;
   cursor:pointer;
 }
 .drag-drop-table {
+  margin-top:20px;
+  margin-bottom:20px;
   display:table;
+  height: 90px;
 }
-
+.droppable-wrap .drag-drop-table {
+  background-color: #ffc107;
+}
 .drag-drop-table > div {
   display:table-row;
 }
@@ -21,10 +27,6 @@
   display:table-cell;
   vertical-align:middle;
   width:100%;
-}
-.drag-drop-table {
-  margin-top:20px;
-  margin-bottom:20px;
 }
 .drag-drop-table:first-child {
   margin-top: 0;
@@ -53,7 +55,7 @@
     padding: 10px;
     width: 60px !important;
     min-height: 60px;
-    background-color: #750404;
+    background-color: #842029;
 }
 .drop-item {
     position: relative;
@@ -95,7 +97,6 @@
     color: #c01818;
   background-image:url(../img/question-mark-red.svg);
 }
-
 
 
 #bg-image {

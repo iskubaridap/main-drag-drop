@@ -110,10 +110,6 @@ html, body {
   background-color: #fff;
   color: var(--red);
 }
-
-
-
-
 .btn.btn.transparent {
   box-shadow: inset 0 0 0 1px var(--yellow);
   background-color: transparent;
