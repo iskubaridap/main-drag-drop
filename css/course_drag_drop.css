@@ -24,19 +24,35 @@
   padding-right:30px;
   margin-bottom:0;
 }
+#drag-message-section-wrap,
+#drop-message-section-wrap {
+  height: 100vh;
+  position: relative;
+}
+
+#drag-message-section-wrap {
+  display: flex;
+  align-items: center;
+  background-color: #ffe5d0;
+}
 
 #drop-message {
   padding:20px;
   position:absolute;
   z-index:10;
+  left: 0;
+  background-color: #842029;
+  color: #fff;
 }
 
 #drop-message-notice {
   margin-top:0;
   margin-bottom:15px;
 }
-
-.draggable-section, .droppable-wrap {
+.draggable-section {
+  padding: 30px;
+}
+.droppable-wrap {
   padding-top:10px;
   padding-bottom:10px;
   height: 100%;
@@ -101,9 +117,6 @@
   bottom:20px;
 }
 
-.next-page-btn {
-}
-
 .drag-item {
   cursor:pointer;
 }
@@ -150,7 +163,7 @@
 }
 
 .gray-text {
-  color:#B1BABF;
+  color:#6c757d;
 }
 
 .bg-gray{
@@ -161,4 +174,3 @@
 .bg-red{
   background-color: brown;
 }
-
