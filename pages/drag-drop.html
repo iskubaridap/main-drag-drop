@@ -3,58 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>drag-drop-sample</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/course.css">
-    <link rel="stylesheet" href="../css/quiz.css">
-    <link rel="stylesheet" href="../css/alternative-template.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- <link rel="stylesheet" href="../css/alternative-template.css"> -->
     <link rel="stylesheet" href="../css/drop-down.css">
     <link rel="stylesheet" href="../css/drag-drop.css">
+    
 </head>
 
-<body id="pageWrapper">
-    <style>
-    .dontDisplay,
-    .seriesOfImages
-    {
-        display: none;
-    }
-    .hideElement
-    {
-        opacity: 0;
-    }
-    .imgHolder img
-    {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    #resetScreenBtn
-    {
-        bottom: 130px;
-    }
-    .bg-lightgray{
-        background-color: #e6e7e8;
-    }
-    .btn.red{
-        border-color: #F6BD03;
-        background-color: #F6BD03;
-        color: #fff;
-    }
-</style>
-
-<audio id="audio">
-    <source data-path="blank.mp3" type="audio/mpeg">
-</audio>
-<script>
-    var pageFinish = false;
-    var audioProgress = 0;
-    var audioPlayed = false;
-    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
-</script>
+<body id="body-orange-bg">
     <div id="page-info" class="dont-display">
         <p class="extra-title"><strong>Page Info</strong></p>
         <div class="page-info-item"><span class="page-info-title"><strong>Title</strong></span>
@@ -73,165 +31,145 @@
             <p></p>
         </div>
     </div>
-    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
-    <div id="transcriptTextWrapper" class="dontDisplay">
-        <div id="transcriptText">
-            <p>Lorem ipsum dolor sit amet, egestas urna fusce iaculis, tempus vel, ac et faucibus posuere commodo tristique, mi ac nibh cras tortor. Libero velit faucibus, integer venenatis et blandit nibh scelerisque quam, in feugiat leo et placerat. </p>
-        </div>
-    </div>
-  
-    <div id="wrapperPage"> 
-        <div id="wrapper">
-            <div id="main">
-                <div class="container-fluid drag-drop-wrap no-padding wht-text">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 no-padding bg-draggable">
-                            <div class="flex-container flex-container-align-center percentByHeight" data-height="100">
-                                <div class="min-width drag-wrap element-right element-position-relative min-padding">
-                                    <div class="drag-drop-item-wrap draggable-wrap drag-drop-left-padding-sm">
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div>
-                                                    <p class="large-font draggable-text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                                <div>
-                                                    <div class="draggable-droppable-item-wrap" data-id="1">
-                                                        <div class="drag-item draggable-droppable-item blue" data-id="1"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
+    
+    <div class="content section-page pt-0">
+        <div class="container-fluid drag-drop-wrap no-padding wht-text">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 no-padding bg-draggable">
+                    <div class="drag-drop-section-wrap">
+                        <div class="min-width drag-wrap element-right element-position-relative min-padding">
+                            <div class="drag-drop-item-wrap draggable-wrap drag-drop-left-padding-sm">
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div>
+                                            <p class="large-font draggable-text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
                                         </div>
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div>
-                                                    <p class="large-font draggable-text">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                                <div>
-                                                    <div class="draggable-droppable-item-wrap" data-id="2">
-                                                        <div class="drag-item draggable-droppable-item blue" data-id="2"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div>
-                                                    <p class="large-font draggable-text">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                                <div>
-                                                    <div class="draggable-droppable-item-wrap" data-id="3">
-                                                        <div class="drag-item draggable-droppable-item blue" data-id="3"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div>
-                                                    <p class="large-font draggable-text">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                                <div>
-                                                    <div class="draggable-droppable-item-wrap" data-id="4">
-                                                        <div class="drag-item draggable-droppable-item blue" data-id="4"></div>
-                                                    </div>
-                                                </div>
+                                        <div>
+                                            <div class="draggable-droppable-item-wrap" data-id="1">
+                                                <div class="drag-item draggable-droppable-item blue" data-id="1"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 no-padding bg-droppable">
-                            <div class="flex-container flex-container-align-center percentByHeight" data-height="100">
-                                <div class="min-width drop-wrap element-left element-position-relative min-padding">
-                                    <div class="row drag-drop-btn">
-                                        <div class="col-md-12 text-center"><span class="btn-reset btn red">Reset </span></div>
-                                    </div>
-                                    <div class="drag-drop-item-wrap droppable-wrap drag-drop-right-padding-sm">
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div class="droppable-red-wrap">
-                                                    <div class="draggable-droppable-item-wrap semi-transparent">
-                                                        <div class="drop-item" data-id="2" data-answer-value=""></div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-lightgray">
-                                                    <p class="large-font droppable-text">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                            </div>
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div>
+                                            <p class="large-font draggable-text">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
                                         </div>
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div class="droppable-red-wrap">
-                                                    <div class="draggable-droppable-item-wrap semi-transparent">
-                                                        <div class="drop-item" data-id="1" data-answer-value=""></div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-lightgray">
-                                                    <p class="large-font droppable-text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div class="droppable-red-wrap">
-                                                    <div class="draggable-droppable-item-wrap semi-transparent">
-                                                        <div class="drop-item" data-id="4" data-answer-value=""></div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-lightgray">
-                                                    <p class="large-font droppable-text">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="drag-drop-table">
-                                            <div>
-                                                <div class="droppable-red-wrap">
-                                                    <div class="draggable-droppable-item-wrap semi-transparent">
-                                                        <div class="drop-item" data-id="3" data-answer-value=""></div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-lightgray">
-                                                    <p class="large-font droppable-text">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores? </p>
-                                                </div>
+                                        <div>
+                                            <div class="draggable-droppable-item-wrap" data-id="2">
+                                                <div class="drag-item draggable-droppable-item blue" data-id="2"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row drag-drop-btn">
-                                        <div class="col-md-12 text-center"><span class="btn-submit btn red">Submit </span></div>
+                                </div>
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div>
+                                            <p class="large-font draggable-text">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
+                                        </div>
+                                        <div>
+                                            <div class="draggable-droppable-item-wrap" data-id="3">
+                                                <div class="drag-item draggable-droppable-item blue" data-id="3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div>
+                                            <p class="large-font draggable-text">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
+                                        </div>
+                                        <div>
+                                            <div class="draggable-droppable-item-wrap" data-id="4">
+                                                <div class="drag-item draggable-droppable-item blue" data-id="4"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid" id="transcript">
-            <div class="row">
-                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
-                    <div id="transcriptCloseBtn"><span>X </span></div>
-                    <div id="transcriptShow"></div>
+                <div class="col-md-6 col-sm-6 no-padding bg-droppable">
+                    <div class="flex-container flex-container-align-center percentByHeight" data-height="100">
+                        <div class="min-width drop-wrap element-left element-position-relative min-padding">
+                            <div class="row drag-drop-btn">
+                                <div class="col-md-12 text-center"><span class="btn-reset btn white">Reset </span></div>
+                            </div>
+                            <div class="drag-drop-item-wrap droppable-wrap drag-drop-right-padding-sm">
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div class="droppable-red-wrap">
+                                            <div class="draggable-droppable-item-wrap semi-transparent">
+                                                <div class="drop-item" data-id="2" data-answer-value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-lightgray">
+                                            <p class="large-font droppable-text">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div class="droppable-red-wrap">
+                                            <div class="draggable-droppable-item-wrap semi-transparent">
+                                                <div class="drop-item" data-id="1" data-answer-value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-lightgray">
+                                            <p class="large-font droppable-text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div class="droppable-red-wrap">
+                                            <div class="draggable-droppable-item-wrap semi-transparent">
+                                                <div class="drop-item" data-id="4" data-answer-value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-lightgray">
+                                            <p class="large-font droppable-text">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores?  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-drop-table">
+                                    <div>
+                                        <div class="droppable-red-wrap">
+                                            <div class="draggable-droppable-item-wrap semi-transparent">
+                                                <div class="drop-item" data-id="3" data-answer-value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-lightgray">
+                                            <p class="large-font droppable-text">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi soluta dolores? </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row drag-drop-btn">
+                                <div class="col-md-12 text-center"><span class="btn-submit btn white">Submit </span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="bg-image" class="dark-bg"></div>
+    
     <script src="../js/jquery.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/jquery.main.js"></script>
-    <script src="../js/glossary.js"></script>
+    <script src="../js/settings.js"></script>
     <script src="../js/wrapper.js"></script>
-    <!-- <script src="./js/wrapper2.js"></script>
-    <script src="./js/wrapper3.js"></script>
-    <script src="./js/wrapper4.js"></script> -->
     <script src="../js/page.js"></script>
-    <script src="../js/custom-code.js"></script>
     <script src="../js/global-values.js"></script>
+    <script src="../js/quiz.js"></script>
     <script src="../js/data-1_.js"></script>
     <script src="../js/data-1.js"></script>
     <script src="../js/drag-drop-code.js"></script>
     <script src="../js/drop-down-code.js"></script>
+    <script src="../js/custom-code.js"></script>
     <script src="../js/init.js"></script>
 </body>
 
