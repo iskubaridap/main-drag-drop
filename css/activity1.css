@@ -179,6 +179,22 @@
         height: auto;
     }
 }
+@media (max-width:1026px){
+    #drag-drop-container .response-btns.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        width: 140px;
+        height: 140px;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 120px;
+        color: var(--text-color);
+        box-shadow: 5px 5px 0px rgb(0 0 0 / 75%);
+    }
+}
 @media (max-width:991px) {
     #cybereason-logo-header{
         padding-bottom: 0 !important;

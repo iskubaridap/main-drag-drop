@@ -104,12 +104,12 @@
 
 .antivirus-logo, .drop-item {
   position:absolute;
-  width:270px;
-  height:270px;
+  width:260px;
+  height:260px;
 }
 
 .drop-item {
-  top:20px;
+  top:25px;
   z-index:5;
 }
 
@@ -173,4 +173,108 @@
 
 .bg-red{
   background-color: brown;
+}
+@media (min-width:1400px){
+  .draggable-section {
+    padding: 30px;
+  }
+  
+}
+@media (max-width:1200px){
+  .draggable-section {
+    padding: 12px;
+    margin-top: 5%;
+  }
+  .antivirus-logo, .drop-item {
+    position:absolute;
+    width:200px;
+    height:200px;
+    
+  }
+  .droppable-wrap {
+    padding-top:20px;
+    padding-bottom:10px;
+    height: 100%;
+  }
+  .droppable-wrap {
+    margin-left:auto;
+    margin-right:auto;
+    width:200px;
+    position:relative;
+  }
+  #drag-message-section-wrap {
+    height: 100vh;
+    padding-top: 100px;
+  }
+}
+@media (max-width:1026px){
+  .draggable-section {
+    padding: 5px;
+    margin-top: 5%;
+    bottom: 0;
+  }
+  .draggable-text {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+  }
+  .large-font{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.367;
+  }
+  .antivirus-logo, .drop-item {
+    position:absolute;
+    width:200px;
+    height:200px;
+  }
+}
+@media (max-width:992px){
+  .large-font{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.367;
+  }
+  .antivirus-logo, .drop-item {
+    position:absolute;
+    width:170px;
+    height:170px;
+  }
+}
+@media (max-width:769px){
+  .large-font{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.367;
+  }
+  .antivirus-logo, .drop-item {
+    position:absolute;
+    width:170px;
+    height:170px;
+  }
+  .droppable-wrap{
+    width: 180px;
+  }
+}
+
+@media (max-width:536px){
+  #drag-message-section-wrap{
+    margin-top: 90%;
+  }
+}
+
+@media (max-width:440px){
+  #drag-message-section-wrap{
+    margin-top: 530px;
+  }
+}
+
+@media (max-width:372px){
+  #drag-message-section-wrap{
+    margin-top: 500px;
+  }
+  
+  .large-font{
+    line-height: 1;
+  }
 }
