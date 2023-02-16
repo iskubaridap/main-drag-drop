@@ -228,3 +228,16 @@
         display: block;
     }
 }
+
+
+@media (max-width:440px){
+    .btn.yellow{
+        margin-bottom: 10px;
+    }
+  }
+
+@media (max-width:372px){
+    .btn.yellow{
+        margin-bottom: 10px;
+    }
+  }
