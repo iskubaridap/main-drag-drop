@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Securing_Device_to_Cloud_VS_Cloud_to_Cloud_Traffic</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course_drag_drop.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body id="pageWrapper"><style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="page4.mp3" type="audio/mpeg" data-default="page4.mp3" data-incorrect="Wrongpage4.mp3" data-one-correct="HCpage4.mp3" data-both-correct="BCpage4.mp3">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>The Cloud problem isn't just about managing software. Allowing employees to use their own devices increases productivity and employee satisfaction, while lowering equipment costs for the business. As the boundaries between company interests
+                and employee privacy are increasingly blurred, it is no wonder only</p>
+            <p><strong><em>36% of companies say they can enforce data-loss prevention in the Cloud.</em></strong></p>
+            <p>With so many devices in play, the idea of controlling them all can seem overwhelming. How can we keep sensitive client data off unmanaged devices when the line between managed and unmanaged devices is so blurred? Then, once the data has made
+                it to a managed device, how do we continue to protect that data?</p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main">
+                <div class="large-font wrap-section no-padding">
+                    <div id="headerContainer"></div>
+                    <div id="bodyContainer">
+                        <div class="intro-ani">
+                            <div><img class="img-responsive hideElement addAnimation element-center imgContainer" src="../img/page4-1.gif" data-animation="fadeIn" data-timing="0.25" data-default="../img/page4-1.gif">
+                                <div class="seriesOfImages"><img class="img-responsive hideElement addAnimation element-center" src="../img/page4-1.gif" data-animation="fadeIn" data-timing="0.5"><img class="img-responsive hideElement addAnimation element-center" src="../img/page4-2.gif"
+                                        data-animation="" data-timing="7"><img class="img-responsive hideElement addAnimation element-center" src="../img/page4-3.gif" data-animation="" data-timing="11"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page4-1.gif" data-animation="" data-timing="14"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page4-2.gif" data-animation="fadeIn" data-timing="27"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page4-3.gif" data-animation="" data-timing="34"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page4-4.gif" data-animation="" data-timing="50"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page4-5.gif" data-animation="" data-timing="60"></div>
+                            </div>
+                        </div>
+                        <div class="container drag-drop-container dontDisplay">
+                            <div class="row hidden-xs hidden-sm">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><span class="reset-drag-drop-btn">Reset</span></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"><span class="submit-drag-drop-btn">Submit</span></div>
+                            </div>
+                            <div class="row hidden-md hidden-lg">
+                                <div class="col-md-12 col-sm-12 col-xs-12 text-center"><span class="reset-drag-drop-btn" style="display: inline">Reset</span><span class="submit-drag-drop-btn" style="display: inline; margin-left: 15px">Submit</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 zIndex1">
+                                    <div class="draggable-area">
+                                        <div class="drag-items-wrap">
+                                            <div class="drag-item-wrap" data-icon="control-behavior-for-byod-devices" data-value="control-behavior-for-byod-devices">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-control-behavior-for-byod-devices" data-icon="control-behavior-for-byod-devices" data-value="control-behavior-for-byod-devices" data-toggle="tooltip" title="Control Behavior for BYO Devices">
+                                                        <div class="drag-item-info" data-text="Enforces Cloud data access across managed and unmanaged devices in an increasingly Remote working world"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device-management status, certificates, McAfee Agents, and more. Control behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the Customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-one-correct="You are half right... Device Access Control Policies allow Cloud Security Admins to control when, where, and how Managed devices can access files vs. Unmanaged devices based on several factors including location, Device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-incorrect="This isn't right at all. Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"></div><span class="drag-item-text dontDisplay">Control Behavior for BYOD Devices</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="device-access-control-policies" data-value="device-access-control-policies">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-device-access-control-policies" data-icon="device-access-control-policies" data-value="device-access-control-policies" data-toggle="tooltip" title="Device Access Control Policies">
+                                                        <div class="drag-item-info" data-text="Enforces control policy based on access context including device, operating system, device management status, location, and corporate / personal accounts."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device-management status, certificates, McAfee Agents, and more. Control behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the Customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-one-correct="You are half right... Device Access Control Policies allow Cloud Security Admins to control when, where, and how Managed devices can access files vs. Unmanaged devices based on several factors including location, Device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-incorrect="This isn't right at all. Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"></div><span class="drag-item-text dontDisplay">Device Access Control Policies</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="insider-threat-detection" data-value="insider-threat-detection">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-insider-threat-detection" data-icon="insider-threat-detection" data-value="insider-threat-detection" data-toggle="tooltip" title="Inside-Threat Detection">
+                                                        <div class="drag-item-info" data-text="Leverages machine learning to detect activity signaling negligent and malicious behavior including insiders stealing sensitive data"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device-management status, certificates, McAfee Agents, and more. Control behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the Customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-one-correct="You are half right... Device Access Control Policies allow Cloud Security Admins to control when, where, and how Managed devices can access files vs. Unmanaged devices based on several factors including location, Device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-incorrect="This isn't right at all. Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"></div><span class="drag-item-text dontDisplay">Insider-Threat Detection</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="mcafee-ground-link" data-value="mcafee-ground-link">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-mcafee-ground-link" data-icon="mcafee-ground-link" data-value="mcafee-ground-link" data-toggle="tooltip" title="McAfee Ground Link">
+                                                        <div class="drag-item-info" data-text="Brokers the connection between McAfee and on-premises LDAP directory services, DLP solutions, proxies, firewalls, and key management services"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device-management status, certificates, McAfee Agents, and more. Control behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the Customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-one-correct="You are half right... Device Access Control Policies allow Cloud Security Admins to control when, where, and how Managed devices can access files vs. Unmanaged devices based on several factors including location, Device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"
+                                                                        data-incorrect="This isn't right at all. Device Access Control Policies allow Cloud Security Admins to control when, where, and how managed devices can access files vs. unmanaged devices based on several factors including location, device management status, certificates, McAfee Agents, and more. Control Behavior for BYOD devices provides the ability to enforce Cloud-data access across managed and unmanaged devices in an increasingly remote working world by having the ability to designate a managed device from an unmanaged device with a number of controls, including integration with the customer’s MDM Platform (VMWare AirWatch, MobileIron, and others.)"></div><span class="drag-item-text dontDisplay">McAfee Ground Link</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="privacy-guard" data-value="privacy-guard">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-privacy-guard" data-icon="privacy-guard" data-value="privacy-guard" data-toggle="tooltip" title="Privacy Guard">
+                                                        <div class="drag-item-info" data-text="Leverages an irreversible one-way process to tokenize user-identifying information on-premises and obfuscates enterprise identity"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Access Analytics allows users to control when, where, and how files can be viewed. Account Compromise Detection can help users catch incidents as they are happening, allowing for real-time intervention. McAfee Ground Link and Privacy Guard keep the data inside the building safe, while Insider Threat Detection protects all data across physical and Cloud servers."
+                                                                        data-one-correct="You are half right... Access Analytics allows users to control when, where, and how files can be viewed. Account Compromise Detection can help users catch incidents as they are happening, allowing for real-time intervention. McAfee Ground Link and Privacy Guard keep the data inside the building safe, while Insider Threat Detection protects all data across physical and Cloud servers."
+                                                                        data-incorrect="This isn't right at all. Access Analytics allows users to control when, where, and how files can be viewed. Account Compromise Detection can help users catch incidents as they are happening, allowing for real-time intervention. McAfee Ground Link and Privacy Guard keep the data inside the building safe, while Insider Threat Detection protects all data across physical and Cloud servers."></div><span class="drag-item-text dontDisplay">Privacy Guard</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-left">Tap the information button<img src="../img/i.png"> on a tile to learn what that feature does. Then drag the correct feature over to fix the broken model. Once you've patched the model, tap submit to lock in
+                                            your answer. <strong>Remember:</strong> There are two issues that need <span class="red-text">M</span>VISION Cloud solutions. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 zIndex0 droppable-area">
+                                    <div id="cloud-car">
+                                        <div class="drop-select-wrap"></div>
+                                        <div class="drop-items-wrap unsanctioned-drop" data-value="device-access-control-policies">
+                                            <div class="drop-item red-border drop-icn icn-unsanctioned-devices" data-value="device-access-control-policies">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                        <div class="drop-items-wrap car-drop" data-value="control-behavior-for-byod-devices">
+                                            <div class="drop-item red-border drop-icn icn-data-that-travels" data-value="control-behavior-for-byod-devices">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 30px">
+                                <div class="col-md-12 text-center"><span class="dontDisplay btn red next-page-btn">Next </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="resource-info-wrap">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="resource-info-box">
+                        <div id="resource-info-close-btn"><span>X</span></div>
+                        <div id="resource-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/wrapper.js"></script>
+</body>
+
+</html>

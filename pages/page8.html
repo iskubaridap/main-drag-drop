@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNAPP</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/course_drag_drop_cnapp.css">
+    <link rel="stylesheet" href="../css/course_cnapp.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/video-template.css">
+</head>
+
+<body id="body-orange-bg">
+    <style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="blank.mp3" type="audio/mpeg" data-default="blank.mp3" data-incorrect="blank.mp3" data-one-correct="blank.mp3" data-both-correct="blank.mp3">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>N/A </p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main">
+                <div class="large-font wrap-section no-padding">
+                    <div id="headerContainer"></div>
+                    <div id="bodyContainer" style="padding-top: 50px; padding-bottom: 50px">
+                        <div class="container drag-drop-container">
+                            <div class="row hidden-xs hidden-sm">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><span class="reset-drag-drop-btn">Reset</span></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"><span class="submit-drag-drop-btn">Submit</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 zIndex1">
+                                    <div class="draggable-area" style="padding-top: 20px">
+                                        <div class="drag-items-wrap">
+                                            <div class="drag-item-wrap" data-icon="Discover-and-Classification" data-value="incorrect">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand Discover-and-Classification" data-icon="Discover-and-Classification" data-value="incorrect" data-toggle="tooltip-" title="Discover and Classification">
+                                                        <div class="drag-item-info" data-text="Discovery and Classification is the CNAPP component that provides the ability to discover all resources and classify them into services based on overall risk."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Correct!" data-one-correct="You are half right..." data-incorrect="Incorrect."></div><span class="drag-item-text dontDisplay">Discovery and Classification </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="Cloud-Security-Posture-Mgmt-CSPM" data-value="correct">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand Cloud-Security-Posture-Mgmt-CSPM" data-icon="Cloud-Security-Posture-Mgmt-CSPM" data-value="correct" data-toggle="tooltip-" title="Cloud Security Posture Mgmt (CSPM)">
+                                                        <div class="drag-item-info" data-text="Cloud Security Posture Management (CSPM) is the CNAPP component that provides the ability to manage Cloud security posture and vulnerabilities introduced by container and serverless deployments."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Correct!" data-one-correct="You are half right..." data-incorrect="Incorrect."></div><span class="drag-item-text dontDisplay">Cloud Security Posture Management (CSPM) </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="App-Service-Segmentation" data-value="incorrect">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand App-Service-Segmentation" data-icon="App-Service-Segmentation" data-value="incorrect" data-toggle="tooltip-" title="App/Service Segmentation">
+                                                        <div class="drag-item-info" data-text="App / service segmentation is the CNAPP component that provides a Zero Trust Model for service-to-service communication."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Correct!" data-one-correct="You are half right..." data-incorrect="Incorrect."></div><span class="drag-item-text dontDisplay">App / Service Segmentation </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="Cloud-Workload-Protection-CWPP" data-value="correct">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand Cloud-Workload-Protection-CWPP" data-icon="Cloud-Workload-Protection-CWPP" data-value="correct" data-toggle="tooltip-" title="Cloud Workload Protection (CWPP)">
+                                                        <div class="drag-item-info" data-text="Cloud Workload Protection Platform (CWPP) is the CNAPP component that applies the MITRE Framework for Cloud Security to drive detection and remediation of Cloud-native threats and vulnerabilities across workloads and containers."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Correct!" data-one-correct="You are half right..." data-incorrect="Incorrect."></div><span class="drag-item-text dontDisplay">Cloud Workload Protection Platform (CWPP) </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="Access-Governamance" data-value="incorrect">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand Access-Governamance" data-icon="Access-Governamance" data-value="incorrect" data-toggle="tooltip-" title="Access Governamance">
+                                                        <div class="drag-item-info" data-text="Access governance manages permissions across the Cloud [Identity and Access Management (IAM)] and workloads (shell / process) and monitors for privilege escalation."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Correct!" data-one-correct="You are half right..." data-incorrect="Incorrect."></div><span class="drag-item-text dontDisplay">Access Governance</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="Container-Security" data-value="correct">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand Container-Security" data-icon="Container-Security" data-value="correct" data-toggle="tooltip-" title="Container-Security">
+                                                        <div class="drag-item-info" data-text="Container security is the CNAPP component for posture management, workload, and governance for container-based computing."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Correct!" data-one-correct="You are half right..." data-incorrect="Incorrect."></div><span class="drag-item-text dontDisplay">Container Security </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding-top: 30px; bottom: 30px;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 zIndex0 droppable-area">
+                                    <div id="page-3-bg">
+                                        <div class="drop-select-wrap"></div>
+                                        <div class="drop-items-wrap drop-item-extra drop-correct-1" data-value="correct">
+                                            <div class="drop-item red-border drop-icn" data-value="correct">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                        <div class="drop-items-wrap drop-item-extra drop-correct-2" data-value="correct">
+                                            <div class="drop-item red-border drop-icn" data-value="correct">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                        <div class="drop-items-wrap drop-item-extra drop-correct-3" data-value="correct">
+                                            <div class="drop-item red-border drop-icn" data-value="correct">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="row drag-drop-next-btn">
+                                <div class="col-md-12 text-center"><span class="hidden-md hidden-lg reset-drag-drop-btn-2 btn red">Reset</span><span class="hidden-md hidden-lg submit-drag-drop-btn-2 btn red">Submit</span><span class="dontDisplay btn red next-page-btn-2">Next </span></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="resource-info-wrap" style="background-color: rgba(0, 0, 0, 0.5)">
+                <div class="_table">
+                    <div>
+                        <div>
+                            <div id="resource-info-box">
+                                <div id="resource-info-close-btn"><span>X</span></div>
+                                <div id="resource-info">
+                                    <p class="text-left">Tap the information button<img src="../img/i.png"> on a tile to learn what that feature does. Then drag the correct feature over to fix the broken model. Once you've patched the model, tap submit to lock in your
+                                        answer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+</body>
+
+</html>

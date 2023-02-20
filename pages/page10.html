@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Securing_Device_to_Cloud_VS_Cloud_to_Cloud_Traffic</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course_drag_drop.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body id="pageWrapper"><style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="page3.mp3" type="audio/mpeg" data-default="page3.mp3" data-incorrect="Wrongpage3.mp3" data-one-correct="HCpage3.mp3" data-both-correct="BCpage3.mp3">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>When surveyed, employees will self-report using as many as 32 Cloud services on average. When looking at the actual usage data (as opposed to a survey), the number of Cloud services in use balloons to 1,945 on average. That is a massive amount
+                of policies, procedures, and security settings to sift through.</p>
+            <p>Perhaps that's why only <strong><em>33% of companies say they can control application collaboration settings</em></strong>.</p>
+            <p>To that point, the adoption of Cloud-based file sharing services has made it easy for anyone to share files regardless of their content. In the Corporate world, this can pose some very serious concerns. Companies aren’t just worried about
+                keeping sensitive information like source code, trade secrets, financial information, and other data from falling into the wrong hands. They are also concerned about violating regulations such as HIPAA, SOX, PCI-DSS, GDPR, and other industry
+                rules that may leave them exposed to millions of dollars in fines and loss of revenue. Remember the Shared Responsibility Model? The <strong>Customer, NOT the CSP</strong>, is <strong>responsible</strong> for the safety of their data across
+                all three Cloud platforms, IaaS, PaaS and SaaS!</p>
+            <p>Let’s look at two more risk models. In this first scenario, we find a typical risk model associated with systems of record such as Office 365. Employees of a major Pharma company are working on a crucial project for a new drug formula, keeping
+                associated data in a OneDrive folder in the Drug Company’s Office 365 Tenant in the Cloud. A disgruntled employee attempts to share this confidential folder with a competitor by trying to create a shared link.</p>
+            <p>The second model depicts a Fortune 1000 Company based in the USA with offices in Europe and Asia, and they use Office365 SharePoint, as their workforce is mostly remote. These users access files and data to collaborate and create, sharing
+                files in the Cloud from anywhere with a decent Internet connection. The Company does NOT want any&nbsp; high-value or regulated data, such as PCI, or PI, stored there, because if this data falls into the wrong hands, or is exposed or stolen,
+                it could cost the Company hundreds of millions of dollars in lost revenue, fines, lost Market share, lawsuits, and more.</p>
+            <p>How can <span class="red-text">M</span>VISION Cloud help them protect their data in the Cloud? Don't forget, you can tap and hold any tile to learn more about what each solution does.</p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main">
+                <div class="large-font wrap-section no-padding">
+                    <div id="headerContainer"></div>
+                    <div id="bodyContainer">
+                        <div class="intro-ani">
+                            <div><img class="img-responsive hideElement addAnimation element-center imgContainer" src="../img/page3-1.gif" data-animation="fadeIn" data-timing="6.5" data-default="../img/page3-1.gif">
+                                <div class="seriesOfImages"><img class="img-responsive hideElement addAnimation element-center" src="../img/page3-1.gif" data-animation="fadeIn" data-timing="4"><img class="img-responsive hideElement addAnimation element-center" src="../img/page3-2.gif"
+                                        data-animation="" data-timing="14"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-1.png" data-animation="fadeIn" data-timing="30"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page3-2.gif" data-animation="" data-timing="32"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-1.png" data-animation="" data-timing="68"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page3-3.gif" data-animation="" data-timing="84"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-4.gif" data-animation="" data-timing="105"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page3-5.gif" data-animation="" data-timing="113"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-6.gif" data-animation="" data-timing="134"><img class="img-responsive hideElement addAnimation element-center"
+                                        src="../img/extra-page3-7.gif" data-animation="fadeIn" data-timing="156"></div>
+                            </div>
+                        </div>
+                        <div class="container drag-drop-container dontDisplay">
+                            <div class="row hidden-xs hidden-sm">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><span class="reset-drag-drop-btn">Reset</span></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"><span class="submit-drag-drop-btn">Submit</span></div>
+                            </div>
+                            <div class="row hidden-md hidden-lg">
+                                <div class="col-md-12 col-sm-12 col-xs-12 text-center"><span class="reset-drag-drop-btn" style="display: inline">Reset</span><span class="submit-drag-drop-btn" style="display: inline; margin-left: 15px">Submit</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 zIndex1">
+                                    <div class="draggable-area">
+                                        <div class="drag-items-wrap">
+                                            <div class="drag-item-wrap" data-icon="in-app-coaching" data-value="in-app-coaching">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-in-app-coaching" data-icon="in-app-coaching" data-value="in-app-coaching" data-toggle="tooltip" title="In-App Coaching">
+                                                        <div class="drag-item-info" data-text="Coaches users in real-time within the native email, messaging, and collaboration application, where the incident occurred"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-one-correct="You are half right...  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-incorrect="This isn't right at all.  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated/high-value data from being stored in the Cloud."></div><span class="drag-item-text dontDisplay">In-App Coaching</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="collaboration-controls-using-dlp" data-value="collaboration-controls-using-dlp">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-collaboration-controls-using-dlp" data-icon="collaboration-controls-using-dlp" data-value="collaboration-controls-using-dlp" data-toggle="tooltip" title="Collaboration Controls using DLP">
+                                                        <div class="drag-item-info" data-text="Restricts collaboration on content stored in both SharePoint and OneDrive in Real Time using Lightning Link. Also applies to Google Drive and Box in Near Real Time."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-one-correct="You are half right...  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-incorrect="This isn't right at all.  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated/high-value data from being stored in the Cloud."></div><span class="drag-item-text dontDisplay">Collaboration Controls using DLP</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="policy-incident-management" data-value="policy-incident-management">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-policy-incident-management" data-icon="policy-incident-management" data-value="policy-incident-management" data-toggle="tooltip" title="Policy-Incident Management">
+                                                        <div class="drag-item-info" data-text="Offers a unified interface to review incidents, take manual action, and rollback an automatic remediation action to restore a file and its permissions"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-one-correct="You are half right...  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-incorrect="This isn't right at all.  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated/high-value data from being stored in the Cloud."></div><span class="drag-item-text dontDisplay">Policy-Incident Management</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="cloud-based-dlp-for-regulated-data" data-value="cloud-based-dlp-for-regulated-data">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-cloud-based-dlp-for-regulated-data" data-icon="cloud-based-dlp-for-regulated-data" data-value="cloud-based-dlp-for-regulated-data" data-toggle="tooltip" title="Cloud Based DLP for Regulated Data">
+                                                        <div class="drag-item-info" data-text="Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevents regulated/high-value data from being stored in the Cloud."><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-one-correct="You are half right...  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-incorrect="This isn't right at all.  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated/high-value data from being stored in the Cloud."></div><span class="drag-item-text dontDisplay">Cloud Based DLP for Regulated Data</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drag-item-wrap" data-icon="autonomous-remediation" data-value="autonomous-remediation">
+                                                <div class="drag-holder">
+                                                    <div class="drag-item gray-border icon-brand icn-autonomous-remediation" data-icon="autonomous-remediation" data-value="autonomous-remediation" data-toggle="tooltip" title="Autonomous Remediation">
+                                                        <div class="drag-item-info" data-text="Coaches users to correct policy incidents themselves, and once corrected, automatically resolves incident alerts to reduce IT’s manual review of incidents"><span>i</span></div>
+                                                        <div class="drag-item-info-resources"></div>
+                                                        <div class="text-middle">
+                                                            <div>
+                                                                <div>
+                                                                    <div class="submit-response-drag" data-both-correct="Well done! Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-one-correct="You are half right...  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated / high-value data from being stored in the Cloud."
+                                                                        data-incorrect="This isn't right at all.  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated/high-value data from being stored in the Cloud."></div><span class="drag-item-text dontDisplay">Autonomous Remediation</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-left">Tap the information button<img src="../img/i.png"> on a tile to learn what that feature does. Then drag the correct feature over to fix the broken model. Once you've patched the model, tap submit to lock in
+                                            your answer. <strong>Remember:</strong> There are two issues that need <span class="red-text">M</span>VISION Cloud solutions. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 zIndex0 droppable-area">
+                                    <div id="cloud-server">
+                                        <div class="drop-select-wrap"></div>
+                                        <div class="drop-items-wrap multiple-platform-drop" data-value="cloud-based-dlp-for-regulated-data">
+                                            <div class="drop-item red-border drop-icn icn-multiple-platforms" data-value="cloud-based-dlp-for-regulated-data">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                        <div class="drop-items-wrap outdated-setting-drop" data-value="collaboration-controls-using-dlp">
+                                            <div class="drop-item red-border drop-icn icn-outdated-setting" data-value="collaboration-controls-using-dlp">
+                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 30px">
+                                <div class="col-md-12 text-center"><span class="dontDisplay btn red next-page-btn">Next </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="resource-info-wrap">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="resource-info-box">
+                        <div id="resource-info-close-btn"><span>X</span></div>
+                        <div id="resource-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/wrapper.js"></script>
+</body>
+
+</html>
