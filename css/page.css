@@ -1,6 +1,7 @@
 #body-orange-bg {
   background: linear-gradient(135deg, #e64a30, #c84029);
-  height: 100vh;
+  height: auto;
+  background-attachment: fixed;
 }
 .content {
   padding-top: 20px;
@@ -582,8 +583,15 @@ font-size: 5em;
     bottom: 20px;
     right: 20px;
 }
-
-@media (min-width:1200px) {
+@media (min-width:1400px) {
+  .hexagon-yellow-bar-container{
+      padding-left: 65px;
+  }
+  .video-item-thumbnail {
+    width: 1000px;
+  }
+}
+@media (max-width:1200px) {
   .hexagon-yellow-bar-container{
       padding-left: 65px;
   }
