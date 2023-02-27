@@ -27,11 +27,11 @@
 #drag-message-section-wrap,
 #drop-message-section-wrap {
   height: 100vh;
-  position: relative;
-}
+  /* position: relative; */
+} 
 
 #drag-message-section-wrap {
-  display: flex;
+  display: block;
   align-items: center;
   background-color: #ffe5d0;
 }
@@ -50,7 +50,7 @@
   margin-bottom:15px;
 }
 .draggable-section {
-  padding: 30px;
+  padding: 5px;
 }
 .droppable-wrap {
   padding-top:10px;
@@ -64,9 +64,9 @@
 }
 
 .draggable-text {
-  padding-top:15px;
-  padding-bottom:15px;
-  padding-right:15px;
+  padding-top:3px;
+  padding-bottom:3px;
+  padding-right:3px;
 }
 
 .draggable-item-wrap, .draggable-item {
@@ -90,7 +90,7 @@
 .droppable-wrap {
   margin-left:auto;
   margin-right:auto;
-  width:270px;
+  width:150px;
   position:relative;
 }
 
@@ -104,8 +104,8 @@
 
 .antivirus-logo, .drop-item {
   position:absolute;
-  width:230px;
-  height:230px;
+  width:150px;
+  height:150px;
 }
 
 .drop-item {
@@ -114,7 +114,7 @@
 }
 
 .antivirus-logo {
-  bottom:20px;
+  bottom:40px;
 }
 
 .drag-item {
@@ -175,7 +175,7 @@
   background-color: brown;
 }
 
-@media (min-width:1400px){
+/* @media (min-width:1400px){
   .draggable-section {
     padding: 30px;
   }
@@ -313,4 +313,4 @@
     width: 120px;
     height: 90%;
   }
-}
+} */

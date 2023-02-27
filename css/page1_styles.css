@@ -42,14 +42,14 @@
     
 }
 
-@media (max-width:1536px){
+@media (max-width:1536px) and (min-width: 1495px){
     #tmp-logo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 10px;
-        width: 500px;
-        height: 500px;
+        width: 450px;
+        height: 450px;
         border-radius: 1000px;
         background-color: var(--yellow);
         font-weight: bold;
@@ -62,16 +62,15 @@
         margin-top: 7%;
         padding-bottom: 25px;
     }
-
 }
-@media (max-width:1440px){
+@media (max-width:1455px) and (min-width: 1440px){
     #tmp-logo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 10px;
-        width: 500px;
-        height: 500px;
+        width: 450px;
+        height: 450px;
         border-radius: 1000px;
         background-color: var(--yellow);
         font-weight: bold;
@@ -84,7 +83,51 @@
         margin-top: 7%;
         padding-bottom: 25px;
     }
-    
+}
+@media (max-width:1440px) and (min-width: 1350px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 450px;
+        height: 450px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 7em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 7%;
+        padding-bottom: 25px;
+    } 
+}
+@media (max-width:1350px) and (min-width: 1200px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 450px;
+        height: 450px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 7em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 7%;
+        padding-bottom: 25px;
+    }
+    #title-text{
+        font-size: 4.7em;
+    }
 }
 @media (max-width: 1200px) and (min-width: 1025px){
     #tmp-logo {
@@ -92,23 +135,29 @@
         justify-content: center;
         align-items: center;
         margin-right: 10px;
-        width: 400px;
-        height: 400px;
+        width: 380px;
+        height: 380px;
         border-radius: 1000px;
         background-color: var(--yellow);
         font-weight: bold;
         color: var(--text-color);
-        font-size: 7em;
+        font-size: 6em;
         text-transform: uppercase;
         box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
     }
     .wrapper-content{
-        margin-top: 15%;
-        padding-bottom: 25px;
+        margin-top: 0;
+        padding-bottom: 5px;
+    }
+    #title-text{
+        font-size: 4.1em;
+    }
+    .content{
+        padding-top: 0%;
     }
 }
 
-@media (max-width: 1024px) and (min-width: 990px){
+@media (max-width: 1025px) and (min-width: 990px){
     #tmp-logo {
         display: flex;
         justify-content: center;
@@ -120,12 +169,12 @@
         background-color: var(--yellow);
         font-weight: bold;
         color: var(--text-color);
-        font-size: 4em;
+        font-size: 4.5em;
         text-transform: uppercase;
         box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
     }
     #title-text{
-        font-size: 3em;
+        font-size: 3.8em;
     }
     .biggest-font{
         font-size: 24px;
@@ -150,68 +199,183 @@
         box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
     }
 }
-@media (max-width: 988px) and (min-width: 768px){
-    /* 
-    
-    .biggest-font{
-        font-size: 24px;
+@media (max-width: 990px) and (min-width: 769px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 320px;
+        height: 320px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 5em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 3.2em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 0%;
+        left: 20%;
+        width: 70%;
+    }
+}
+@media (max-width: 769px) and (min-width: 576px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 300px;
+        height: 300px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 5em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 2.5em;
+    }
+    .content{
+        padding-top: 0%;
     }
     .tmp-logo-wrapper{
         position: relative;
         margin-top: 10%;
         left: 20%;
+        width: 70%;
     }
-    #img-sub {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 150px;
-        border-radius: 10px;
-        background-color: var(--yellow);
-        font-weight: bold;
-        color: var(--text-color);
-        font-size: 4em;
-        text-transform: uppercase;
-        box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
-    }
-    #reset-drag-drop-btn{
-        margin-top: 50%;
-    } */
-    .row{
-        display: inline-block;
-    }
-    #title-text{
-       font-size: 4.2em;
-    }
+}
+@media (max-width: 576px) and (min-width: 515px){
     #tmp-logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 0;
-        margin-left: 0;
-        width: 350px;
-        height: 350px;
+        margin-right: 10px;
+        width: 300px;
+        height: 300px;
         border-radius: 1000px;
         background-color: var(--yellow);
         font-weight: bold;
         color: var(--text-color);
-        font-size: 4em;
+        font-size: 5em;
         text-transform: uppercase;
         box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
     }
-}
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
 
-@media (max-width:440px){
+    }
+    #title-text{
+        font-size: 2.5em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 10%;
+        left: 20%;
+        width: 70%;
+    }
+}
+@media (max-width: 515px) and (min-width: 476px){
     #tmp-logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: 10px;
+        width: 270px;
+        height: 270px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 5em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 2.3em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 10%;
+        left: 20%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 476px) and (min-width: 455px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 270px;
+        height: 270px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 5em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 2.2em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 10%;
+        left: 20%;
+        width: 70%;
+    }
+}
+@media (max-width: 455px) and (min-width: 416px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
         width: 250px;
         height: 250px;
         border-radius: 1000px;
@@ -222,75 +386,123 @@
         text-transform: uppercase;
         box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
     }
-    #title-text{
-        font-size: 3em;
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
     }
-    .biggest-font{
-        font-size: 24px;
+    #title-text{
+        font-size: 2em;
+    }
+    .content{
+        padding-top: 0%;
     }
     .tmp-logo-wrapper{
         position: relative;
         margin-top: 10%;
         left: 20%;
-    }
-    #img-sub {
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 150px;
-        border-radius: 10px;
-        background-color: var(--yellow);
-        font-weight: bold;
-        color: var(--text-color);
-        font-size: 4em;
-        text-transform: uppercase;
-        box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
+        width: 70%;
     }
 }
-
-@media (max-width:370px){
+@media (max-width: 455px) and (min-width: 416px){
     #tmp-logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 150px;
-        height: 150px;
+        margin-right: 10px;
+        width: 250px;
+        height: 250px;
         border-radius: 1000px;
-        background-color: var(--yellow);
-        font-weight: bold;
-        color: var(--text-color);
-        font-size: 3em;
-        text-transform: uppercase;
-        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
-    }
-    #title-text{
-        font-size: 2em;
-    }
-    .biggest-font{
-        font-size: 24px;
-    }
-    .tmp-logo-wrapper{
-        position: relative;
-        margin-top: 20%;
-        left: -10%;
-    }
-    #img-sub {
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 150px;
-        border-radius: 10px;
         background-color: var(--yellow);
         font-weight: bold;
         color: var(--text-color);
         font-size: 4em;
         text-transform: uppercase;
-        box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 2em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 10%;
+        left: 20%;
+        width: 70%;
+    }
+}
+@media (max-width: 416px) and (min-width: 370px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 250px;
+        height: 250px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 4em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 2em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 10%;
+        left: 20%;
+        width: 70%;
+    }
+}
+@media (max-width: 370px) and (min-width: 200px){
+    #tmp-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 250px;
+        height: 250px;
+        border-radius: 1000px;
+        background-color: var(--yellow);
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 4em;
+        text-transform: uppercase;
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.75);
+    }
+    .wrapper-content{
+        margin-top: 0;
+        padding-bottom: 5px;
+
+    }
+    #title-text{
+        font-size: 2em;
+    }
+    .content{
+        padding-top: 0%;
+    }
+    .tmp-logo-wrapper{
+        position: relative;
+        margin-top: 10%;
+        left: 20%;
+        width: 70%;
     }
 }

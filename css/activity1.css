@@ -229,6 +229,12 @@
     }
 }
 
+@media (max-width:540px){
+    .btn.yellow{
+        margin-bottom: 10px;
+    }
+  }
+
 
 @media (max-width:440px){
     .btn.yellow{

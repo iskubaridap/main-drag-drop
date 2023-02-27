@@ -154,12 +154,15 @@
         padding-right: 0px;
     }
 }
-@media (max-width:767px) {
+@media (max-width:768px) {
     .drag-drop-left-padding-sm {
         padding-left: 0px;
     }
     .drag-drop-right-padding-sm {
         padding-right: 0px;
+    }
+    .drag-drop-table:first-child {
+      margin-top: 20px !important;
     }
 }
 

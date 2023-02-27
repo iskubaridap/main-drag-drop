@@ -23,33 +23,33 @@
     }
 
 }
-@media (max-width:1536px) and (min-width: 1440px){
+@media (max-width:1536px) and (min-width: 1438px){
     .wrapper-content{
-        margin-top: 7%;
+        margin-top: 15%;
         padding-bottom: 25px;
     }
 }
-@media (max-width:1438px)and (min-width: 1201px){
+@media (max-width:1440px)and (min-width: 1201px){
     .wrapper-content{
-        margin-top: 30%;
+        margin-top: 20%;
         padding-bottom: 25px;
     }
 }
 @media (max-width: 1200px) and (min-width: 1025px){
     .wrapper-content{
+        margin-top: 20%;
+        padding-bottom: 25px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 990px){
+    .wrapper-content{
+        margin-top: 20%;
+        padding-bottom: 25px;
+    }
+}
+@media (max-width: 989px) and (min-width: 781px){
+    .wrapper-content{
         margin-top: 30%;
-        padding-bottom: 25px;
-    }
-}
-@media (max-width: 1024px) and (min-width: 991px){
-    .wrapper-content{
-        margin-top: 32%;
-        padding-bottom: 25px;
-    }
-}
-@media (max-width: 990px) and (min-width: 768px){
-    .wrapper-content{
-        margin-top: 55%;
         padding-bottom: 5px;
     }
     #img-sub {
@@ -64,21 +64,21 @@
         background-color: var(--yellow);
         font-weight: bold;
         color: var(--text-color);
-        font-size: 4em;
+        font-size: 3em;
         text-transform: uppercase;
         box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
     }
 }
-@media (max-width: 767px) and (min-width: 439px){
+@media (max-width: 780px) and (min-width: 439px){
     .wrapper-content{
-        margin-top: 85%;
+        margin-top: 60%;
         padding-bottom: 5px;
     }
     #img-sub {
         margin-right: auto;
         margin-left: auto;
         display: flex;
-        justify-content: center;
+         justify-content: center;
         align-items: center;
         width: 300px;
         height: 100px;
@@ -91,6 +91,7 @@
         box-shadow: 8px 8px 0px rgb(0 0 0 / 75%);
     }
 }
+
 @media (max-width:440px) and (min-width: 369px){
     #img-sub {
         margin-right: auto;
@@ -120,8 +121,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 300px;
-        height: 100px;
+        width: 200px;
+        height: 50px;
         border-radius: 10px;
         background-color: var(--yellow);
         font-weight: bold;
