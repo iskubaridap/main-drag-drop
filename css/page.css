@@ -583,6 +583,11 @@ font-size: 5em;
     bottom: 20px;
     right: 20px;
 }
+@media (max-height: 700px) {
+  .section-page {
+    height: auto;
+  }
+}
 @media (min-width:1400px) {
   .hexagon-yellow-bar-container{
       padding-left: 65px;

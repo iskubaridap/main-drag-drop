@@ -26,13 +26,13 @@
 }
 #drag-message-section-wrap,
 #drop-message-section-wrap {
-  height: 100vh;
+  min-height: 100vh;
   /* position: relative; */
 } 
 
 #drag-message-section-wrap {
   display: block;
-  align-items: center;
+  /* align-items: center; */
   background-color: #ffe5d0;
 }
 
