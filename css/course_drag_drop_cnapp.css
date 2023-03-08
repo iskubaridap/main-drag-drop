@@ -321,7 +321,7 @@
   background-image:url(../img/response-missing.svg);
 }
 
-.icn-access-analytics {
+/* .icn-access-analytics {
   background-image:url(../img/icn-access-analytics.svg);
 }
 
@@ -423,7 +423,7 @@
 
 .icn-device-access-control-policies {
   background-image:url(../img/icn-device-access-control-policies.svg);
-}
+} */
 
 .gray-border {
   border:2px solid #E6E7E8;
