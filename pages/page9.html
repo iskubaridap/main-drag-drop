@@ -1,206 +1,178 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Securing_Device_to_Cloud_VS_Cloud_to_Cloud_Traffic</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/course_drag_drop.css">
-    <link rel="stylesheet" href="../css/course.css">
-    <link rel="stylesheet" href="../css/quiz.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Page 1</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/page1_styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/course_drag_drop_p9.css">
+        <link rel="stylesheet" href="../css/course_p9.css">
 </head>
 
-<body id="pageWrapper"><style>
-    .dontDisplay,
-    .seriesOfImages
-    {
-        display: none;
-    }
-    .hideElement
-    {
-        opacity: 0;
-    }
-    .imgHolder img
-    {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    #resetScreenBtn
-    {
-        bottom: 130px;
-    }
-</style>
-
-<audio id="audio">
-    <source data-path="page2.mp3" type="audio/mpeg" data-default="page2.mp3" data-incorrect="Wrongpage2.mp3" data-one-correct="HCpage2.mp3" data-both-correct="BCpage2.mp3">
-</audio>
-<script>
-    var pageFinish = false;
-    var audioProgress = 0;
-    var audioPlayed = false;
-    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
-</script>
-    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
-    <div id="transcriptTextWrapper" class="dontDisplay">
-        <div id="transcriptText">
-            <p>This is the Shared Responsibility model, and under this model, some security concerns are the customer’s responsibility, some are the responsibility of the service provider, and some responsibilities are shared between the client and service
-                provider. Some clients struggle to understand this model, which can lead to mistakes. Recent examples of serious data-loss incidents include FedEx in 2018 and Capital One in 2019.&nbsp; Both leaks originated from Amazon Web Services, but
-                were these incidents Amazon's fault? </p>
-            <p>In both cases, user error was the cause for the data loss incident. In FedEx’s case, they failed to configure an Amazon Simple Storage Service Bucket (or S3) setting exposing the private information of thousands of Customers. For Capital One,
-                a misconfigured AWS Firewall, and subsequent compromise of an administrator password, allowed the exposure of 100 million individuals in the US and 6 million people in Canada.&nbsp; They didn't understand their shared responsibility in
-                the Cloud, and that lead to decisions that left them vulnerable. They are not alone. </p>
-            <p><strong><em>Only 26% of companies say they can audit IaaS configurations.</em></strong> </p>
-            <p>The image in the middle of your screen is a highly simplified model of both incidents. The buildings represent businesses that are currently making the same mistakes that FedEx and Capital One made. The red tiles represent solutions offered
-                by <span class="red-text">M</span>VISION Cloud.</p>
-            <p>Tap and hold each tile to see more information about that solution. Once you've found the correct <span class="red-text">M</span>VISION feature, drag that tile over to fix the error that left the data vulnerable. Tap Submit to lock in your
-                answer and receive feedback </p>
+<body id="body-orange-bg">
+    <div id="page-info" class="dont-display">
+        <p class="extra-title"><strong>Page Info</strong></p>
+        <div class="page-info-item"><span class="page-info-title"><strong>Title</strong></span>
+            <p class="page-info-txt" data-info="title">Page 9</p>
+        </div>
+        <div class="page-info-item"><span class="page-info-title"><strong>Description</strong><br></span>
+            <p class="page-info-txt" data-info="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel porttitor est. Quisque neque ex, pharetra vel metus nec, dapibus facilisis magna.</p>
         </div>
     </div>
-    <div id="wrapperPage">
-        <div id="wrapper">
-            <div id="main">
-                <div class="large-font wrap-section no-padding">
-                    <div id="headerContainer"></div>
-                    <div id="bodyContainer">
-                        <div class="intro-ani">
-                            <div><img class="img-responsive hideElement addAnimation element-center imgContainer" src="../img/page2-4.gif" data-animation="fadeIn" data-timing="0.25" data-default="../img/page2-1.gif">
-                                <div class="seriesOfImages"><img class="img-responsive hideElement addAnimation element-center" src="../img/page2-4.gif" data-animation="fadeIn" data-timing="0.5"><img class="img-responsive hideElement addAnimation element-center" src="../img/page2-2.gif"
-                                        data-animation="" data-timing="6"><img class="img-responsive hideElement addAnimation element-center" src="../img/page2-3.gif" data-animation="" data-timing="10"><img class="img-responsive hideElement addAnimation element-center"
-                                        src="../img/page2-3-2.gif" data-animation="" data-timing="13"><img class="img-responsive hideElement addAnimation element-center" src="../img/page2-4.gif" data-animation="" data-timing="16"><img class="img-responsive hideElement addAnimation element-center"
-                                        src="../img/extra-page2-1.gif" data-animation="" data-timing="31"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page2-2.gif" data-animation="" data-timing="38"><img class="img-responsive hideElement addAnimation element-center"
-                                        src="../img/extra-page2-3.gif" data-animation="" data-timing="42"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page2-4.gif" data-animation="" data-timing="43"><img class="img-responsive hideElement addAnimation element-center"
-                                        src="../img/extra-page2-5.gif" data-animation="" data-timing="55"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page2-6.gif" data-animation="" data-timing="79"><img class="img-responsive hideElement addAnimation element-center"
-                                        src="../img/extra-page2-7.gif" data-animation="fadeIn" data-timing="84"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page2-8.gif" data-animation="" data-timing="96"></div>
+    <!-- <audio id="audio">
+        <source src="../media/audio/slide_1.mp3" type="audio/mpeg">
+    </audio> -->
+    <div id="transcript-text-wrapper" class="dont-display">
+        <p class="extra-title"><strong>Transcript Text</strong></p>
+        <div id="transcript-text">
+            <p></p>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <div class="container-fluid wrapper-content">
+            <!-- <div class="intro-ani">
+                <div><img class="img-responsive hideElement addAnimation element-center imgContainer" src="../img/page3-1.gif" data-animation="fadeIn" data-timing="6.5" data-default="../img/page3-1.gif">
+                    <div class="seriesOfImages"><img class="img-responsive hideElement addAnimation element-center" src="../img/page3-1.gif" data-animation="fadeIn" data-timing="4"><img class="img-responsive hideElement addAnimation element-center" src="../img/page3-2.gif"
+                            data-animation="" data-timing="14"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-1.png" data-animation="fadeIn" data-timing="30"><img class="img-responsive hideElement addAnimation element-center"
+                            src="../img/extra-page3-2.gif" data-animation="" data-timing="32"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-1.png" data-animation="" data-timing="68"><img class="img-responsive hideElement addAnimation element-center"
+                            src="../img/extra-page3-3.gif" data-animation="" data-timing="84"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-4.gif" data-animation="" data-timing="105"><img class="img-responsive hideElement addAnimation element-center"
+                            src="../img/extra-page3-5.gif" data-animation="" data-timing="113"><img class="img-responsive hideElement addAnimation element-center" src="../img/extra-page3-6.gif" data-animation="" data-timing="134"><img class="img-responsive hideElement addAnimation element-center"
+                            src="../img/extra-page3-7.gif" data-animation="fadeIn" data-timing="156"></div>
+                </div>
+            </div> -->
+            <div class="container drag-drop-container dontDisplay">
+                <!-- <div class="row d-xs-none d-sm-none">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><spa id="reset-drag-drop-btn" class="btn btn-clean yellow">Reset</span></div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"><span class="submit-drag-drop-btn btn yellow">Submit</span></div>
+                </div> -->
+                <div class="row hidden-md hidden-lg">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center"><span class="reset-drag-drop-btn btn yellow" style="display: inline">Reset</span><span class="submit-drag-drop-btn btn yellow" style="display: inline; margin-left: 15px">Submit</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 zIndex1">
+                        <div class="draggable-area">
+                            <div class="drag-items-wrap">
+                                <div class="drag-item-wrap" data-icon="in-app-coaching" data-value="in-app-coaching">
+                                    <div class="drag-holder">
+                                        <div class="drag-item gray-border icon-brand icn-in-app-coaching" data-icon="in-app-coaching" data-value="in-app-coaching" data-toggle="tooltip" title="In-App Coaching">
+                                            <div class="drag-item-info" data-text="Coaches users in real-time within the native email, messaging, and collaboration application, where the incident occurred"><span>i</span></div>
+                                            <div class="drag-item-info-resources"></div>
+                                            <div class="text-middle">
+                                                <div>
+                                                    <div>
+                                                        <div class="submit-response-drag" data-both-correct="Well done! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-one-correct="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-incorrect="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore culpa reiciendis nihil deleniti libero nulla minima adipisci molestiae fugit!"></div><span id="incorrect-red" class="drag-item-text dontDisplay">INCORRECT</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-item-wrap" data-icon="collaboration-controls-using-dlp" data-value="collaboration-controls-using-dlp">
+                                    <div class="drag-holder">
+                                        <div class="drag-item gray-border icon-brand icn-collaboration-controls-using-dlp" data-icon="collaboration-controls-using-dlp" data-value="collaboration-controls-using-dlp" data-toggle="tooltip" title="Collaboration Controls using DLP">
+                                            <div class="drag-item-info" data-text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"><span>i</span></div>
+                                            <div class="drag-item-info-resources"></div>
+                                            <div class="text-middle">
+                                                <div>
+                                                    <div>
+                                                        <div class="submit-response-drag" data-both-correct="Well done! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-one-correct="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-incorrect="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore culpa reiciendis nihil deleniti libero nulla minima adipisci molestiae fugit!"></div><span id="correct-green" class="drag-item-text dontDisplay">CORRECT 1</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-item-wrap" data-icon="policy-incident-management" data-value="policy-incident-management">
+                                    <div class="drag-holder">
+                                        <div class="drag-item gray-border icon-brand icn-policy-incident-management" data-icon="policy-incident-management" data-value="policy-incident-management" data-toggle="tooltip" title="Policy-Incident Management">
+                                            <div class="drag-item-info" data-text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"><span>i</span></div>
+                                            <div class="drag-item-info-resources"></div>
+                                            <div class="text-middle">
+                                                <div>
+                                                    <div>
+                                                        <div class="submit-response-drag" data-both-correct="Well done! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-one-correct="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-incorrect="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore culpa reiciendis nihil deleniti libero nulla minima adipisci molestiae fugit!"></div>
+                                                            <span id="incorrect-red" class="drag-item-text dontDisplay">INCORRECT</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-item-wrap" data-icon="cloud-based-dlp-for-regulated-data" data-value="cloud-based-dlp-for-regulated-data">
+                                    <div class="drag-holder">
+                                        <div class="drag-item icon-brand drag-item gray-border icon-brand icn-cloud-based-dlp-for-regulated-data" data-icon="cloud-based-dlp-for-regulated-data" data-value="cloud-based-dlp-for-regulated-data" data-toggle="tooltip" title="Cloud Based DLP for Regulated Data">
+                                            <div class="drag-item-info" data-text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"><span>i</span></div>
+                                            <div class="drag-item-info-resources"></div>
+                                            <div class="text-middle">
+                                                <div>
+                                                    <div>
+                                                        <div class="submit-response-drag" data-both-correct="Well done! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-one-correct="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-incorrect="This isn't right at all.  Collaboration Controls using DLP - restricts all kinds of collaboration on content stored in both SharePoint and OneDrive. Cloud-Based DLP for Regulated Data - Applies Cloud based DLP policies to data in all Cloud services across data at rest and in transit. Prevent regulated/high-value data from being stored in the Cloud."></div><span id="correct-green" class="drag-item-text dontDisplay">CORRECT 2</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drag-item-wrap" data-icon="autonomous-remediation" data-value="autonomous-remediation">
+                                    <div class="drag-holder">
+                                        <div class="drag-item gray-border icon-brand icn-autonomous-remediation" data-icon="autonomous-remediation" data-value="autonomous-remediation" data-toggle="tooltip" title="Autonomous Remediation">
+                                            <div class="drag-item-info" data-text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"><span>i</span></div>
+                                            <div class="drag-item-info-resources"></div>
+                                            <div class="text-middle">
+                                                <div>
+                                                    <div>
+                                                        <div class="submit-response-drag" data-both-correct="Well done! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-one-correct="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur accusantium ipsum voluptates repellat sequi explicabo officiis. Quis minima odit inventore!"
+                                                            data-incorrect="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore culpa reiciendis nihil deleniti libero nulla minima adipisci molestiae fugit!"></div><span id="incorrect-red" class="drag-item-text dontDisplay">INCORRECT</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                           
                         </div>
-                        <div class="container drag-drop-container dontDisplay">
-                            <div class="row hidden-xs hidden-sm">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><span class="reset-drag-drop-btn">Reset</span></div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"><span class="submit-drag-drop-btn">Submit</span></div>
-                            </div>
-                            <div class="row hidden-md hidden-lg">
-                                <div class="col-md-12 col-sm-12 col-xs-12 text-center"><span class="reset-drag-drop-btn" style="display: inline">Reset</span><span class="submit-drag-drop-btn" style="display: inline; margin-left: 15px">Submit</span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 zIndex1">
-                                    <div class="draggable-area">
-                                        <div class="drag-items-wrap">
-                                            <div class="drag-item-wrap" data-icon="content-analytics" data-value="content-analytics">
-                                                <div class="drag-holder">
-                                                    <div class="drag-item gray-border icon-brand icn-content-analytics" data-icon="content-analytics" data-value="content-analytics" data-toggle="tooltip" title="User Behavioral Analytics">
-                                                        <div class="drag-item-info" data-text="Detects&nbsp;anomalies in usage related to access to&nbsp;a&nbsp;Cloud&nbsp;Service Provider (CSP), data&nbsp;in a&nbsp;CSP,&nbsp;or administration of&nbsp;a&nbsp;CSP."><span>i</span></div>
-                                                        <div class="drag-item-info-resources"></div>
-                                                        <div class="text-middle">
-                                                            <div>
-                                                                <div>
-                                                                    <div class="submit-response-drag" data-both-correct="Well done! Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-one-correct="You're half right... Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-incorrect="This isn't right at all. Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP, or administration of a CSP."></div><span class="drag-item-text dontDisplay">User Behavioral Analytics</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="drag-item-wrap" data-icon="encryption" data-value="encryption">
-                                                <div class="drag-holder">
-                                                    <div class="drag-item gray-border icon-brand icn-encryption" data-icon="encryption" data-value="encryption" data-toggle="tooltip" title="Encryption">
-                                                        <div class="drag-item-info" data-text="Protects sensitive data with peer-reviewed, function-preserving encryption schemes, using enterprise-controlled keys for structured and unstructured data"><span>i</span></div>
-                                                        <div class="drag-item-info-resources"></div>
-                                                        <div class="text-middle">
-                                                            <div>
-                                                                <div>
-                                                                    <div class="submit-response-drag" data-both-correct="Well done! Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-one-correct="You're half right... Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-incorrect="This isn't right at all. Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP, or administration of a CSP."></div><span class="drag-item-text dontDisplay">Encryption</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="drag-item-wrap" data-icon="security-configuration-audit" data-value="security-configuration-audit">
-                                                <div class="drag-holder">
-                                                    <div class="drag-item gray-border icon-brand icn-security-configuration-audit" data-icon="security-configuration-audit" data-value="security-configuration-audit" data-toggle="tooltip" title="Security Configuration Audit">
-                                                        <div class="drag-item-info" data-text="Discovers current IaaS infrastructure security settings and suggests modifications or immediate resolution to improve security based on industry best practices"><span>i</span></div>
-                                                        <div class="drag-item-info-resources"></div>
-                                                        <div class="text-middle">
-                                                            <div>
-                                                                <div>
-                                                                    <div class="submit-response-drag" data-both-correct="Well done! Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-one-correct="You're half right... Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-incorrect="This isn't right at all. Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP, or administration of a CSP."></div><span class="drag-item-text dontDisplay">Security Configuration Audit</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="drag-item-wrap" data-icon="removal" data-value="removal">
-                                                <div class="drag-holder">
-                                                    <div class="drag-item gray-border icon-brand icn-removal" data-icon="removal" data-value="removal" data-toggle="tooltip" title="Removal">
-                                                        <div class="drag-item-info" data-text="Permanently removes data from Cloud services that violate policy to comply with compliance regulations"><span>i</span></div>
-                                                        <div class="drag-item-info-resources"></div>
-                                                        <div class="text-middle">
-                                                            <div>
-                                                                <div>
-                                                                    <div class="submit-response-drag" data-both-correct="Well done! Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-one-correct="You're half right... Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-incorrect="This isn't right at all. Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP, or administration of a CSP."></div><span class="drag-item-text dontDisplay">Removal</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="drag-item-wrap" data-icon="contextual-access-control" data-value="contextual-access-control">
-                                                <div class="drag-holder">
-                                                    <div class="drag-item gray-border icon-brand icn-contextual-access-control" data-icon="contextual-access-control" data-value="contextual-access-control" data-toggle="tooltip" title="Contextual Access Control">
-                                                        <div class="drag-item-info" data-text="Enforces coarse allow / block access based on service level risk and granular activity-level controls to prevent upload and download of data"><span>i</span></div>
-                                                        <div class="drag-item-info-resources"></div>
-                                                        <div class="text-middle">
-                                                            <div>
-                                                                <div>
-                                                                    <div class="submit-response-drag" data-both-correct="Well done! Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-one-correct="You're half right... Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP or administration of a CSP."
-                                                                        data-incorrect="This isn't right at all. Our Security Configuration Audit solution completely solves the problem of misconfiguring Cloud security configuration best practices. MVISION Cloud User Behavioral Analytics will detect anomalies in usage related to access to a Cloud Service Provider (CSP), data in a CSP, or administration of a CSP."></div><span class="drag-item-text dontDisplay">Contextual Access Control</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="text-left">Tap the information button<img src="../img/i.png"> on a tile to learn what that feature does. Then drag the correct feature over to fix the broken model. Once you've patched the model, tap submit to lock in
-                                            your answer. <strong>Remember:</strong> There are two issues that need <span class="red-text">M</span>VISION Cloud solutions. </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 zIndex0 droppable-area">
-                                    <div id="cloud-building">
-                                        <div class="drop-select-wrap"></div>
-                                        <div class="drop-items-wrap cloud-drop" data-value="security-configuration-audit">
-                                            <div class="drop-item red-border icn-public-searchable drop-icn" data-value="content-analytics">
-                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
-                                            </div>
-                                        </div>
-                                        <div class="drop-items-wrap building-drop" data-value="content-analytics">
-                                            <div class="drop-item red-border icn-no-password drop-icn" data-value="security-configuration-audit">
-                                                <div class="submit-response-drop" data-missing="Plese drop a tile here."></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-md-9 zIndex0 droppable-area">
+                        <div id="cloud-server">
+                            <div class="drop-select-wrap"></div>
+                            <div class="drop-items-wrap multiple-platform-drop" data-value="cloud-based-dlp-for-regulated-data">
+                                <div class="drop-item red-border drop-icn icn-multiple-platforms" data-value="cloud-based-dlp-for-regulated-data">
+                                    <div class="submit-response-drop" data-missing="Plese drop a tile here.">2</div>
                                 </div>
                             </div>
-                            <div class="row" style="margin-top: 30px">
-                                <div class="col-md-12 text-center"><span class="dontDisplay btn red next-page-btn">Next </span></div>
+                            <div class="drop-items-wrap outdated-setting-drop" data-value="collaboration-controls-using-dlp">
+                                <div class="drop-item red-border drop-icn icn-outdated-setting" data-value="collaboration-controls-using-dlp">
+                                    <div class="submit-response-drop" data-missing="Plese drop a tile here.">1</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- <div class="row" style="margin-top: 30px">
+                    <div class="col-md-12 text-center"><span class="dontDisplay btn yellow next-page-btn">Next </span></div>
+                </div> -->
+        </div>
+    </div>
+
+    
+<div class="content section-page">
+    <div id="wrapper">
+        <div id="main">
+            <div class="wrap-section no-padding">
+                
             </div>
         </div>
         <div class="container-fluid" id="resource-info-wrap">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-12 col-md-12">
                     <div id="resource-info-box">
                         <div id="resource-info-close-btn"><span>X</span></div>
                         <div id="resource-info"></div>
@@ -217,14 +189,17 @@
             </div>
         </div>
     </div>
+</div>
     <script src="../js/jquery.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/jquery.main.js"></script>
-    <script src="../js/glossary.js"></script>
-    <script src="../js/custom_code.js"></script>
-    <script src="../js/course_drag_drop.js"></script>
-    <script src="../js/init.js"></script>
+    <script src="../js/settings.js"></script>
     <script src="../js/wrapper.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/quiz.js"></script>
+    <script src="../js/course_drag_drop_p9.js"></script>
+    <!-- <script src="../js/custom_code_p9.js"></script> -->
+    <script src="../js/init.js"></script>
 </body>
 
 </html>
