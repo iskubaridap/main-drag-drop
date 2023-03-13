@@ -1,3 +1,6 @@
+#button-margins{
+  margin-bottom: 30px;
+}
 .droppable-area {
   padding: 20px;
   margin-left: auto;
@@ -6,6 +9,7 @@
   position: relative;
   display: table;
   height: 150px;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .draggable-area {
@@ -70,7 +74,7 @@
   cursor: pointer;
   color: #fff;
   position: absolute;
-  background-image: linear-gradient(to top right, transparent, transparent 50%, #F37321 50%, #F37321);
+  background-image: linear-gradient(to top right, transparent, transparent 50%, #C01818  50%, #C01818 );
   z-index: 2;
   top: 0;
   right: 0;
@@ -110,6 +114,7 @@
   cursor: move;
   top: 0;
   left: 0;
+  box-shadow: 3px 3px 0px rgb(0 0 0 / 75%);
 }
 
 .drop-items-wrap {
@@ -126,10 +131,11 @@
   display: table;
   padding: 5px 15px;
   cursor: pointer;
-  color: #fff;
-  background-color: #C01818;
+  color:  var(--text-color)f;
+  background-color: var(--yellow);
   text-align: center;
   font-size: 1.2em;
+  min-width: 160px;
 }
 
 #submit-drag-drop-btn, .submit-drag-drop-btn {
@@ -138,16 +144,22 @@
   display: table;
   padding: 5px 15px;
   cursor: pointer;
-  color: #fff;
-  background-color: #C01818;
+  color:  var(--text-color);
+  background-color: var(--yellow);
   text-align: center;
   font-size: 1.2em;
 }
-
-#reset-drag-drop-btn:hover, #submit-drag-drop-btn:hover, .reset-drag-drop-btn:hover, .submit-drag-drop-btn:hover {
-  background-color: #75160D;
+#reset-drag-drop-btn:hover,#submit-drag-drop-btn:hover {
+  background-color: var(--yellow-2);
+  color: var(--text-color);
+  box-shadow: unset;
 }
 
+#reset-drag-drop-btn:focus, #reset-drag-drop-btn:active:focus {
+  box-shadow: inset 0 0 0 1px var(--yellow);
+  background-color: transparent;
+  color: var(--yellow);
+}
 .drag-item-info-resources, .drop-item-info-resources {
   position: absolute;
   width: 60px;
@@ -273,6 +285,7 @@
 
 #cloud-server {
   background-image: url(../img/cloud-server.svg);
+  
 }
 
 #cloud-car {
@@ -704,7 +717,6 @@
   }
   #cloud-building, #cloud-server, #cloud-car {
     position: relative;
-    top: 20px;
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
@@ -770,7 +782,6 @@
   }
   #cloud-building, #cloud-server, #cloud-car {
     position: relative;
-    top: 20px;
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
@@ -936,13 +947,17 @@
   }
   #cloud-building, #cloud-server, #cloud-car {
     position: relative;
-    top: 100px;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background-size: 350px 350px;
   }
   .container{
     margin-top: 40px;
+  }
+  .droppable-area {
+    margin-top: 50%;
+    height: 500px;
+    display: block;
   }
 }
 .drag-holder {

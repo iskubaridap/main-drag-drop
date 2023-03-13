@@ -6,7 +6,7 @@
         <title>Page 1</title>
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/page1_styles.css">
+        <!-- <link rel="stylesheet" href="../css/page1_styles.css"> -->
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/course_drag_drop_p9.css">
         <link rel="stylesheet" href="../css/course_p9.css">
@@ -48,8 +48,11 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><spa id="reset-drag-drop-btn" class="btn btn-clean yellow">Reset</span></div>
                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"><span class="submit-drag-drop-btn btn yellow">Submit</span></div>
                 </div> -->
-                <div class="row hidden-md hidden-lg">
-                    <div class="col-md-12 col-sm-12 col-xs-12 text-center"><span class="reset-drag-drop-btn btn yellow" style="display: inline">Reset</span><span class="submit-drag-drop-btn btn yellow" style="display: inline; margin-left: 15px">Submit</span></div>
+                <div class="row hidden-md hidden-lg" id="button-margins">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <button id="reset-drag-drop-btn" class=" btn btn-clean yellow" style="display: inline">Reset</button>
+                        <button id="submit-drag-drop-btn" class=" btn btn-clean yellow" style="display: inline; margin-left: 15px">Submit</button>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3 zIndex1">
@@ -140,7 +143,7 @@
                            
                         </div>
                     </div>
-                    <div class="col-md-9 zIndex0 droppable-area">
+                    <div class="col-md-9 zIndex0 droppable-area ">
                         <div id="cloud-server">
                             <div class="drop-select-wrap"></div>
                             <div class="drop-items-wrap multiple-platform-drop" data-value="cloud-based-dlp-for-regulated-data">
