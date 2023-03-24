@@ -1,3 +1,4 @@
+console.log('foobar');
 $(document).ready(function(){
     winWidth = $(window).width();
     dropItemMade = false;
@@ -22,7 +23,7 @@ $(document).ready(function(){
     });
     $('.reset-drag-drop-btn').off().on('click', function(){
         winWidth = $(window).width();
-        
+        console.log('reset-drag-drop-btn');
         $('.drag-item-info-resources').slideUp('fast');
         $('.drop-item-info-resources').slideUp('fast');
         

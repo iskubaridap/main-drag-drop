@@ -134,27 +134,27 @@ $(document).ready(function(){
         //$('.drop-select-wrap').hide();
         //$('.drop-items-wrap').show();
         
-        if(self != top)
-        {
-            audioStop();
-            $("#audio source").each(function(){
-                if(numOfCorrect == 2)
-                {
-                    $(this).attr("src",parent.audioPath + $(this).attr("data-both-correct"));
-                }
-                else if(numOfCorrect == 1)
-                {
-                    $(this).attr("src",parent.audioPath + $(this).attr("data-one-correct"));
-                }
-                else if(numOfCorrect == 0)
-                {
-                    $(this).attr("src",parent.audioPath + $(this).attr("data-incorrect"));
-                }
-            });
-            audio.load();
-            audioPlay();
-            parent.showPauseBtn();
-        }
+        // if(self != top)
+        // {
+        //     audioStop();
+        //     $("#audio source").each(function(){
+        //         if(numOfCorrect == 2)
+        //         {
+        //             $(this).attr("src",parent.audioPath + $(this).attr("data-both-correct"));
+        //         }
+        //         else if(numOfCorrect == 1)
+        //         {
+        //             $(this).attr("src",parent.audioPath + $(this).attr("data-one-correct"));
+        //         }
+        //         else if(numOfCorrect == 0)
+        //         {
+        //             $(this).attr("src",parent.audioPath + $(this).attr("data-incorrect"));
+        //         }
+        //     });
+        //     audio.load();
+        //     audioPlay();
+        //     parent.showPauseBtn();
+        // }
         $('.submit-response-drag.correct').off().on('click', function(){
             $("#resource-info").empty().html('<p class="biggest-font text-center">Correct!</p><p>' + $(this).attr('data-both-correct') + '</p>');
             $("#resource-info-wrap").fadeIn("fast");
