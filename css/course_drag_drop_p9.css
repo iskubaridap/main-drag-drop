@@ -3,13 +3,12 @@
 }
 .droppable-area {
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   text-align: center;
   position: relative;
   display: table;
   height: 150px;
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .draggable-area {
@@ -523,9 +522,15 @@
     left: 120px;
   }
   #cloud-building, #cloud-server, #cloud-car {
-    width: 500px;
-    height: 500px;
-    background-size: 500px 500px;
+    width: 540px;
+    height: 540px;
+    background-size: 520px 520px;
+  }
+  #cloud-server {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .droppable-area {
+    background-color: transparent;
   }
   .container{
     margin-top: 30px;
@@ -588,9 +593,15 @@
     left: 120px;
   }
   #cloud-building, #cloud-server, #cloud-car {
-    width: 500px;
-    height: 500px;
+    width: 520px;
+    height: 520px;
     background-size: 500px 500px;
+  }
+  #cloud-server {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .droppable-area {
+    background-color: transparent;
   }
   .container{
     margin-top: 30px;
@@ -652,9 +663,15 @@
     left: 120px;
   }
   #cloud-building, #cloud-server, #cloud-car {
-    width: 500px;
-    height: 500px;
+    width: 520px;
+    height: 520px;
     background-size: 500px 500px;
+  }
+  #cloud-server {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .droppable-area {
+    background-color: transparent;
   }
   .container{
     margin-top: 10px;
@@ -721,6 +738,12 @@
     height: 400px;
     background-size: 400px 400px;
   }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
   .container{
     margin-top: 10px;
   }
@@ -785,6 +808,12 @@
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
+  }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
   }
   .container{
     margin-top: 30px;
@@ -852,6 +881,12 @@
     height: 300px;
     background-size: 300px 300px;
   }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
   .container{
     margin-top: 40px;
   }
@@ -886,6 +921,12 @@
     height: 500px;
     background-size: 400px 400px;
   }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
   .container{
     margin-top: 40px;
   }
@@ -919,6 +960,12 @@
     height: 500px;
     background-size: 400px 400px;
   }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
   .container{
     margin-top: 40px;
   }
@@ -950,6 +997,12 @@
     width: 350px;
     height: 350px;
     background-size: 350px 350px;
+  }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
   }
   .container{
     margin-top: 40px;
