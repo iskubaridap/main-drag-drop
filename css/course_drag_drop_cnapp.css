@@ -321,11 +321,11 @@
 }
 
 .submit-response-drag.correct {
-  background-image:url(../img/response-correct.svg);
+  background-image:url(../img/response_correct.svg);
 }
 
 .submit-response-drag.incorrect {
-  background-image:url(../img/response-incorrect.svg);
+  background-image:url(../img/response_incorrect.svg);
 }
 
 .submit-response-drop.missing {

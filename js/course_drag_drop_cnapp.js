@@ -136,7 +136,7 @@ $(document).ready(function(){
         
         if(self != top)
         {
-            audioStop();
+            // audioStop();
             $("#audio source").each(function(){
                 if(numOfCorrect == 2)
                 {
@@ -151,8 +151,8 @@ $(document).ready(function(){
                     $(this).attr("src",parent.audioPath + $(this).attr("data-incorrect"));
                 }
             });
-            audio.load();
-            audioPlay();
+            // audio.load();
+            // audioPlay();
             parent.showPauseBtn();
         }
         $('.submit-response-drag.correct').off().on('click', function(){
