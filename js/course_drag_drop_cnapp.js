@@ -1,7 +1,7 @@
 $(document).ready(function(){
     winWidth = $(window).width();
     dropItemMade = false;
-    $('#resource-info-wrap').show();
+    // $('#resource-info-wrap').show();
     $("#resource-info-close-btn").off("click").on("click",function(){
         $("#resource-info-wrap").fadeOut("fast");
     });
@@ -45,10 +45,9 @@ $(document).ready(function(){
             }
         });
         
-        $('.drop-select-wrap').empty();
         setSelectElem();
         
-        /*if(winWidth < 766)
+        /* if(winWidth < 766)
         {
             $('.drop-select-wrap').show();
             $('.drop-items-wrap').hide();
@@ -57,7 +56,7 @@ $(document).ready(function(){
         {
             $('.drop-select-wrap').hide();
             $('.drop-items-wrap').show();
-        }*/
+        } */
     });
     $(".drag-item").draggable({
         zIndex: 50,
@@ -136,8 +135,8 @@ $(document).ready(function(){
         
         if(self != top)
         {
-            audioStop();
-            $("#audio source").each(function(){
+            stopAudio();
+            /* $("#audio source").each(function(){
                 if(numOfCorrect == 2)
                 {
                     $(this).attr("src",parent.audioPath + $(this).attr("data-both-correct"));
@@ -150,10 +149,8 @@ $(document).ready(function(){
                 {
                     $(this).attr("src",parent.audioPath + $(this).attr("data-incorrect"));
                 }
-            });
-            audio.load();
+            }); */
             audioPlay();
-            parent.showPauseBtn();
         }
         $('.submit-response-drag.correct').off().on('click', function(){
             $("#resource-info").empty().html('<p class="biggest-font text-center">Correct!</p><p>' + $(this).attr('data-both-correct') + '</p>');
@@ -176,11 +173,10 @@ $(document).ready(function(){
         }
         $("#resource-info-wrap").fadeIn("fast");
     }
-    function setSelectElem()
-    {
+    function setSelectElem() {
+        $('.drop-select-wrap').empty();
         $('.drop-item').each(function(index, value){
-            if($('.drop-select-wrap').children().length < $('.drag-item-wrap').children().length)
-            {
+            if($('.drop-select-wrap').children().length < $('.drag-item-wrap').children().length) {
                 var dropObj = $(this);
                 str = '<select class="drag-select">';
                 str += '<option value="" readisabled selected>Select you answer</option>';
@@ -200,8 +196,7 @@ $(document).ready(function(){
                         var icon = ($(this).val()).split(' - ')[1];
 
                         $('.drag-item').each(function(index3, value3){
-                            if($(this).attr('data-icon') == icon)
-                            {
+                            if($(this).attr('data-icon') == icon) {
                                 draggableObj = $(this);
                                 dragObj = value3;
 
@@ -214,8 +209,7 @@ $(document).ready(function(){
                                 $('.drop-item').each(function(index, value){
                                     droppableElem = this;
 
-                                    if($(this).find('.drag-item').length <= 0)
-                                    {
+                                    if($(this).find('.drag-item').length <= 0) {
                                         $(draggableObj).detach().css({top: 0,left: 0, position: 'absolute'}).appendTo(droppableElem);
                                         $(this).css({display: 'inline-block'});
                                         return false;
