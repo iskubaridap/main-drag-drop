@@ -20,7 +20,7 @@ $(document).ready(function(){
             $("#resource-info-wrap").fadeIn("fast");
         });
     });
-    $('.reset-drag-drop-btn').off().on('click', function(){
+    $('#reset-drag-drop-btn').off().on('click', function(){
         winWidth = $(window).width();
         
         $('.drag-item-info-resources').slideUp('fast');
@@ -77,13 +77,12 @@ $(document).ready(function(){
             $('.drop-item-info-resources').slideUp('fast');
         }
     });
-    $('.submit-drag-drop-btn').off().on('click', function(){
+    $('#submit-drag-drop-btn').off().on('click', function(){
         $('.next-page-btn').fadeIn();
         checkAnswer();
     });
     
-    function checkAnswer()
-    {
+    function checkAnswer() {
         var dropValue = '';
         var numOfCorrect = 0;
         var numOfMissed = 0;
@@ -96,37 +95,31 @@ $(document).ready(function(){
         $('.drop-item').each(function(index, value){
             dragObj = null;
             dropValue = $(this).attr('data-value');
-            if($(this).find('.drag-item').length > 0)
-            {
+            if($(this).find('.drag-item').length > 0) {
                 dragObj = $(this).find('.drag-item').eq(0);
                 dragValue = dragObj.attr('data-value');
                 
-                if(incorrectMsg.length == '')
-                {
+                if(incorrectMsg.length == '') {
                     incorrectMsg = dragObj.find('.submit-response-drag').attr('data-incorrect');
                 }
-                if(oneCorrectMsg.length == '')
-                {
+                if(oneCorrectMsg.length == '') {
                     oneCorrectMsg = dragObj.find('.submit-response-drag').attr('data-one-correct');
                 }
-                if(correctMsg.length == '')
-                {
+                if(correctMsg.length == '') {
                     correctMsg = dragObj.find('.submit-response-drag').attr('data-both-correct');
                 }
-                if(dropValue == dragValue)
-                {
+                if(dropValue == dragValue) {
                     numOfCorrect++;
                     dragObj.find('.submit-response-drag').addClass('correct');
-                }
-                else
-                {
+                } else {
                     dragObj.find('.submit-response-drag').addClass('incorrect');
                 }
             }
-            else if($(this).find('.drag-item').length <= 0)
-            {
+            else if($(this).find('.drag-item').length <= 0) {
                 numOfMissed++;
                 $(this).find('.submit-response-drop').addClass('missing');
+                $("#resource-info").empty().html('<p class="biggest-font text-center">Select your answer</p>');
+                $("#resource-info-wrap").fadeIn("fast");
             }
         });
         
@@ -156,49 +149,36 @@ $(document).ready(function(){
         // }
         
         $('.submit-response-drag.correct').off().on('click', function(){
-            if(numOfCorrect == 1)
-            {
+            if(numOfCorrect == 1) {
                 $("#resource-info").empty().html('<p class="biggest-font text-center">Incorrect!</p><p>' + oneCorrectMsg + '</p>');
-            }
-            else if(numOfCorrect == 2)
-            {
+            } else if(numOfCorrect == 2) {
                 $("#resource-info").empty().html('<p class="biggest-font text-center">Correct!</p><p>' + correctMsg + '</p>');
             }
             $("#resource-info-wrap").fadeIn("fast");
         });
         $('.submit-response-drag.incorrect').off().on('click', function(){
-            if(numOfCorrect == 1)
-            {
+            if(numOfCorrect == 1) {
                 $("#resource-info").empty().html('<p class="biggest-font text-center">Incorrect!</p><p>' + oneCorrectMsg + '</p>');
-            }
-            else if(numOfCorrect == 0)
-            {
+            } else if(numOfCorrect == 0) {
                 $("#resource-info").empty().html('<p class="biggest-font text-center">Incorrect!</p><p>' + incorrectMsg + '</p>');
             }
             $("#resource-info-wrap").fadeIn("fast");
         });
-        $('.submit-response-drop.missing').off().on('click', function(){
+        $('.submit-response-drag.missing').off().on('click', function(){
             $("#resource-info").empty().html('<p class="biggest-font text-center">Missing something?</p><p>' + $(this).attr('data-missing') + '</p>');
             $("#resource-info-wrap").fadeIn("fast");
         });
-        if(numOfCorrect == 2)
-        {
+        if(numOfCorrect == 2) {
             $('.submit-response-drag.correct').trigger('click');
-        }
-        else if(numOfCorrect == 1)
-        {
+        } else if(numOfCorrect == 1) {
             $('.submit-response-drag.incorrect').trigger('click');
-        }
-        else if(numOfCorrect == 0)
-        {
+        } else if(numOfCorrect == 0) {
             $('.submit-response-drag.incorrect').trigger('click');
         }
     }
-    function setSelectElem()
-    {
+    function setSelectElem() {
         $('.drop-item').each(function(index, value){
-            if($('.drop-select-wrap').children().length < $('.drag-item-wrap').children().length)
-            {
+            if($('.drop-select-wrap').children().length < $('.drop-items-wrap').children().length) {
                 var dropObj = $(this);
                 str = '<select class="drag-select">';
                 str += '<option value="" readisabled selected>Select you answer</option>';
@@ -247,21 +227,17 @@ $(document).ready(function(){
             }
         });
     }
-    function checkWindowSize(winSize)
-    {
+    function checkWindowSize(winSize) {
         var str = '';
         
-        if(winSize < 766)
-        {
+        if(winSize < 766) {
             //console.log(winSize + ' - ' + winSize < 766);
             //$('.drop-select-wrap').show();
             //$('.drop-items-wrap').hide();
             dropItemMade = true;
             $('.drop-item-text').hide();
             setSelectElem();
-        }
-        else if(winSize >= 766)
-        {
+        } else if(winSize >= 766) {
             //console.log(winSize + ' - ' + winSize >= 766);
             //$('.drop-select-wrap').hide();
             //$('.drop-items-wrap').show();

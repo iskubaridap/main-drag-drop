@@ -187,60 +187,57 @@
 }
 
 #resource-info-wrap {
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  display: none;
-  margin-top: 10%;
-  margin-left: -50%;
+  position:fixed;
+  z-index:5;
+  width:100%;
+  display:none;
 }
 
 #resource-info-box {
-  margin: 0 auto 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  color: #555;
-  height: 100px;
-  display: table;
-  position: relative;
-  overflow: auto;
-  border: 1px solid #E6E7E8;
-  width: 100%;
+  margin:0 auto 10px;
+  padding:10px;
+  background-color:#fff;
+  color:#555;
+  width:300px;
+  height:100px;
+  display:table;
+  position:relative;
+  overflow:auto;
+  border:1px solid var(--blue);
 }
 
 #resource-info-close-btn {
-  padding: 5px 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  padding:5px 10px;
+  position:absolute;
+  top:0;
+  right:0;
   color: #fff;
-  background-color: #C01818;
-  cursor: pointer;
-  border-radius: 0 5px 0 0;
+  background-color: var(--blue);
+  cursor:pointer;
 }
 
 #resource-info-close-btn:hover {
-  background-color: #75160D;
+  background-color: #0a58ca;
 }
 
 #resource-info {
-  margin-top: 25px;
-  max-height: 250px;
-  overflow: auto;
-  font-size: 1.25em;
+  margin-top:25px;
+  max-height:250px;
+  overflow:auto;
+  font-size:1.25em;
 }
 
 #resource-info-wrap .row {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+  position:absolute;
+  bottom:0px;
+  width:100%;
 }
 
 .drag-select {
   margin-top: 20px;
   display: block;
   font-size: 1.2em;
+  width: 100%;
 }
 
 #red-cloud-wrap {
@@ -312,25 +309,29 @@
 .submit-response-drop.missing:hover {
   background-color: #B1BABF;
 }
-
+.submit-response-drag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .submit-response-drag.correct {
   background-image: url(../img/response_correct.svg);
 }
 
 .submit-response-drag.incorrect {
-  background-image: url(../img/response-incorrect.svg);
+  background-image: url(../img/response_incorrect.svg);
 }
 
 .submit-response-drop.missing {
-  background-image: url(../img/response-missing.svg);
+  background-image: url(../img/response_missing.svg);
 }
 
-#incorrect-red{
+.incorrect-red{
   color: #C01818;
   font-weight: bold;
   font-size: 14px;
 }
-#correct-green{
+.correct-green{
   color: #198754;
   font-weight: bold;
   font-size: 14px;
@@ -466,18 +467,25 @@
 #resource-info-box {
   width: 800px;
 }
-
+.drop-select-wrap {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dontDisplay {
+  display: none;
+}
 @media (min-width:1200px) {
   .drop-item, .drag-item-wrap, .drag-item {
     width: 90px;
     height: 90px;
   }
   .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
-    background-size: 80px 80px;
+    background-size: 90px 90px;
   }
   .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
-    width: 60px;
-    height: 60px;
+    width: 86px;
+    height: 86px;
   }
   .drag-item-info {
     width: 30px;
@@ -497,6 +505,9 @@
   }
   .drop-select-wrap {
     display: none;
+  }
+  .draggable-area {
+    display: block;
   }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
@@ -568,6 +579,9 @@
   }
   .drop-select-wrap {
     display: none;
+  }
+  .draggable-area {
+    display: block;
   }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
@@ -643,6 +657,9 @@
   .drop-select-wrap {
     display: none;
   }
+  .draggable-area {
+    display: block;
+  }
   .cloud-drop {
     top: 100px;
   }
@@ -708,6 +725,9 @@
   }
   .drop-select-wrap {
     display: none;
+  }
+  .draggable-area {
+    display: block;
   }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
@@ -780,6 +800,9 @@
   .drop-select-wrap {
     display: none;
   }
+  .draggable-area {
+    display: block;
+  }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
     margin-right: auto;
@@ -791,10 +814,10 @@
     top: 100px;
   }
   .multiple-platform-drop {
-    top: 120px;
+    top: 100px;
   }
   .outdated-setting-drop {
-    top: 240px;
+    top: 220px;
   }
   .unsanctioned-drop {
     top: 180px;
@@ -849,6 +872,9 @@
     background-color: #fff;
   }
   .drop-select-wrap {
+    display: block;
+  }
+  .draggable-area {
     display: none;
   }
   .drag-items-wrap, .drop-items-wrap {
@@ -897,21 +923,28 @@
     width: 70px;
     height: 70px;
   }
+  .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
+    background-size: 70px 70px;
+  }
+  .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
+    width: 66px;
+    height: 66px;
+  }
   .multiple-platform-drop {
-    top: 160px;
+    top: 85px;
   }
   .outdated-setting-drop{
-    top: 315px;
+    top: 220px;
   }
   .drag-item-info span{
     bottom: 0px;
     left: 10px;
     font-size: 13px;
   }
-  #incorrect-red{
+  .incorrect-red{
     font-size: 11px;
   }
-  #correct-green{
+  .correct-green{
     font-size: 11px;
   }
   #cloud-building, #cloud-server, #cloud-car {
@@ -936,21 +969,28 @@
     width: 70px;
     height: 70px;
   }
+  .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
+    background-size: 70px 70px;
+  }
+  .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
+    width: 66px;
+    height: 66px;
+  }
   .multiple-platform-drop {
-    top: 160px;
+    top: 80px;
   }
   .outdated-setting-drop{
-    top: 315px;
+    top: 220px;
   }
   .drag-item-info span{
     bottom: 0px;
     left: 10px;
     font-size: 13px;
   }
-  #incorrect-red{
+  .incorrect-red{
     font-size: 11px;
   }
-  #correct-green{
+  .correct-green{
     font-size: 11px;
   }
   #cloud-building, #cloud-server, #cloud-car {
@@ -976,27 +1016,27 @@
     height: 75px;
   }
   .multiple-platform-drop {
-    top: 130px;
+    top: 65px;
   }
   .outdated-setting-drop{
-    top: 240px;
+    top: 160px;
   }
   .drag-item-info span{
     bottom: 0px;
     left: 10px;
     font-size: 13px;
   }
-  #incorrect-red{
+  .incorrect-red{
     font-size: 11px;
   }
-  #correct-green{
+  .correct-green{
     font-size: 11px;
   }
   #cloud-building, #cloud-server, #cloud-car {
     position: relative;
     width: 350px;
-    height: 350px;
-    background-size: 350px 350px;
+    height: 450px;
+    background-size: 350px 450px;
   }
   #cloud-server {
     background-color: transparent;
@@ -1008,7 +1048,6 @@
     margin-top: 40px;
   }
   .droppable-area {
-    margin-top: 50%;
     height: 500px;
     display: block;
   }
