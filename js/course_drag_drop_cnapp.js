@@ -1,7 +1,7 @@
 $(document).ready(function(){
     winWidth = $(window).width();
     dropItemMade = false;
-    $('#resource-info-wrap').show();
+    // $('#resource-info-wrap').show();
     $("#resource-info-close-btn").off("click").on("click",function(){
         $("#resource-info-wrap").fadeOut("fast");
     });
@@ -44,11 +44,10 @@ $(document).ready(function(){
                 $(this).removeClass('no-border').addClass('red-border');
             }
         });
-        
         $('.drop-select-wrap').empty();
         setSelectElem();
         
-        /*if(winWidth < 766)
+        /* if(winWidth < 766)
         {
             $('.drop-select-wrap').show();
             $('.drop-items-wrap').hide();
@@ -57,7 +56,7 @@ $(document).ready(function(){
         {
             $('.drop-select-wrap').hide();
             $('.drop-items-wrap').show();
-        }*/
+        } */
     });
     $(".drag-item").draggable({
         zIndex: 50,
@@ -83,8 +82,7 @@ $(document).ready(function(){
         checkAnswer();
     });
     
-    function checkAnswer()
-    {
+    function checkAnswer() {
         var dropValue = '';
         var numOfCorrect = 0;
         var numOfMissed = 0;
@@ -97,35 +95,27 @@ $(document).ready(function(){
         $('.drop-item').each(function(index, value){
             dragObj = null;
             dropValue = $(this).attr('data-value');
-            if($(this).find('.drag-item').length > 0)
-            {
+            if($(this).find('.drag-item').length > 0) {
                 dragObj = $(this).find('.drag-item').eq(0);
                 dragValue = dragObj.attr('data-value');
                 
-                if(incorrectMsg.length == '')
-                {
+                if(incorrectMsg.length == '') {
                     incorrectMsg = dragObj.find('.submit-response-drag').attr('data-incorrect');
                 }
-                if(oneCorrectMsg.length == '')
-                {
+                if(oneCorrectMsg.length == '') {
                     oneCorrectMsg = dragObj.find('.submit-response-drag').attr('data-one-correct');
                 }
-                if(correctMsg.length == '')
-                {
+                if(correctMsg.length == '') {
                     correctMsg = dragObj.find('.submit-response-drag').attr('data-both-correct');
                 }
-                if(dropValue == dragValue)
-                {
+                if(dropValue == dragValue) {
                     numOfCorrect++;
                     dragObj.find('.submit-response-drag').addClass('correct');
-                }
-                else
-                {
+                } else {
                     dragObj.find('.submit-response-drag').addClass('incorrect');
                 }
             }
-            else if($(this).find('.drag-item').length <= 0)
-            {
+            else if($(this).find('.drag-item').length <= 0){
                 numOfMissed++;
                 $(this).find('.submit-response-drop').addClass('missing');
             }
@@ -134,27 +124,24 @@ $(document).ready(function(){
         //$('.drop-select-wrap').hide();
         //$('.drop-items-wrap').show();
         
-        if(self != top)
-        {
-            // audioStop();
-            $("#audio source").each(function(){
-                if(numOfCorrect == 2)
-                {
-                    $(this).attr("src",parent.audioPath + $(this).attr("data-both-correct"));
-                }
-                else if(numOfCorrect == 1)
-                {
-                    $(this).attr("src",parent.audioPath + $(this).attr("data-one-correct"));
-                }
-                else if(numOfCorrect == 0)
-                {
-                    $(this).attr("src",parent.audioPath + $(this).attr("data-incorrect"));
-                }
-            });
-            // audio.load();
-            // audioPlay();
-            parent.showPauseBtn();
-        }
+        // if(self != top) {
+        //     stopAudio();
+        //     $("#audio source").each(function(){
+        //         if(numOfCorrect == 2)
+        //         {
+        //             $(this).attr("src",parent.audioPath + $(this).attr("data-both-correct"));
+        //         }
+        //         else if(numOfCorrect == 1)
+        //         {
+        //             $(this).attr("src",parent.audioPath + $(this).attr("data-one-correct"));
+        //         }
+        //         else if(numOfCorrect == 0)
+        //         {
+        //             $(this).attr("src",parent.audioPath + $(this).attr("data-incorrect"));
+        //         }
+        //     });
+        //     audioPlay();
+        // }
         $('.submit-response-drag.correct').off().on('click', function(){
             $("#resource-info").empty().html('<p class="biggest-font text-center">Correct!</p><p>' + $(this).attr('data-both-correct') + '</p>');
             $("#resource-info-wrap").fadeIn("fast");
@@ -176,11 +163,10 @@ $(document).ready(function(){
         }
         $("#resource-info-wrap").fadeIn("fast");
     }
-    function setSelectElem()
-    {
+    function setSelectElem() {
+        // $('.drop-select-wrap').empty();
         $('.drop-item').each(function(index, value){
-            if($('.drop-select-wrap').children().length < $('.drag-item-wrap').children().length)
-            {
+            if($('.drop-select-wrap').children().length < $('.drop-items-wrap').children().length) {
                 var dropObj = $(this);
                 str = '<select class="drag-select">';
                 str += '<option value="" readisabled selected>Select you answer</option>';
@@ -195,32 +181,37 @@ $(document).ready(function(){
                     $(this).off().on('change', function(){
                         var dragObj = null;
                         var draggableObj = null;
-                        var droppableElem = null;
-                        var val = ($(this).val()).split(' - ')[0];
-                        var icon = ($(this).val()).split(' - ')[1];
+                        const droppableElem = $($('.drop-item')[index2]);
+                        const val = ($(this).val()).split(' - ')[0];
+                        const icon = ($(this).val()).split(' - ')[1];
 
                         $('.drag-item').each(function(index3, value3){
-                            if($(this).attr('data-icon') == icon)
-                            {
+                            if($(this).attr('data-icon') == icon) {
                                 draggableObj = $(this);
                                 dragObj = value3;
 
                                 $('.drop-select-wrap select option').each(function(index4, value4){
-                                    if($(this).prop("selected") == false && (($(this).val()).split(' - ')[1]) == icon)
-                                    {
-                                        $(this).remove();
+                                    if((($(this).val()).split(' - ')[1]) == icon) {
+                                        this.disabled = true;
                                     }
                                 });
-                                $('.drop-item').each(function(index, value){
-                                    droppableElem = this;
-
-                                    if($(this).find('.drag-item').length <= 0)
-                                    {
-                                        $(draggableObj).detach().css({top: 0,left: 0, position: 'absolute'}).appendTo(droppableElem);
-                                        $(this).css({display: 'inline-block'});
-                                        return false;
+                                if($(droppableElem).find('.drag-item').length > 0) {
+                                    const dragItem = $(droppableElem.find('.drag-item'));
+                                    const dragIcon = dragItem.attr('data-icon');
+                                    dragItem.find('.submit-response-drag').removeClass('correct').removeClass('incorrect');
+                                    dragItem.attr('style','');
+                                    dragItem.appendTo(('.drag-item-wrap[data-icon="' + dragIcon + '"] .drag-holder'));
+                                    if(dragItem.hasClass('red-border')) {
+                                        dragItem.removeClass('red-border').addClass('gray-border');
                                     }
-                                });
+                                    $('.drop-select-wrap select option').each(function (ai,av) {
+                                        if((av.getAttribute('value').trim()).length > 0 && dragIcon == (av.getAttribute('value').split(' - ')[1]).trim()) {
+                                            av.disabled = false;
+                                        }
+                                    });
+                                }
+                                $(draggableObj).detach().css({top: 0,left: 0, position: 'absolute'}).appendTo(droppableElem);
+                                $(this).css({display: 'inline-block'});
                                 return false;
                             }
                         });
@@ -229,21 +220,17 @@ $(document).ready(function(){
             }
         });
     }
-    function checkWindowSize(winSize)
-    {
+    function checkWindowSize(winSize) {
         var str = '';
         
-        if(winSize < 766)
-        {
+        if(winSize < 766) {
             //console.log(winSize + ' - ' + winSize < 766);
             //$('.drop-select-wrap').show();
             //$('.drop-items-wrap').hide();
             dropItemMade = true;
             $('.drop-item-text').hide();
             setSelectElem();
-        }
-        else if(winSize >= 766)
-        {
+        } else if(winSize >= 766) {
             //console.log(winSize + ' - ' + winSize >= 766);
             //$('.drop-select-wrap').hide();
             //$('.drop-items-wrap').show();
