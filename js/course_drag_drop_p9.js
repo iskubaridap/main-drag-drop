@@ -179,8 +179,10 @@ $(document).ready(function(){
     function setSelectElem() {
         $('.drop-item').each(function(index, value){
             if($('.drop-select-wrap').children().length < $('.drop-items-wrap').children().length) {
+                const dropItemWrapElem = $('.drop-items-wrap')[index];
+                const dropItemDataValue = dropItemWrapElem.getAttribute('data-value');
                 var dropObj = $(this);
-                str = '<select class="drag-select">';
+                str = '<select class="drag-select" data-value="' + dropItemDataValue + '">';
                 str += '<option value="" readisabled selected>Select you answer</option>';
                 $('.drag-item').each(function(index2, value2){
                     str += '<option value="' + $(this).attr('data-value') + ' - ' + $(this).attr('data-icon') + '">' + $(this).find('.drag-item-text').text() + '</option>';
@@ -189,39 +191,58 @@ $(document).ready(function(){
                 $('.drop-select-wrap').append(str);
 
 
-                $('.drop-select-wrap select').each(function(index2, value2){
-                    $(this).off().on('change', function(){
-                        var dragObj = null;
-                        var draggableObj = null;
-                        var droppableElem = null;
-                        var val = ($(this).val()).split(' - ')[0];
-                        var icon = ($(this).val()).split(' - ')[1];
+                $('.drop-select-wrap select[data-value="' + dropItemDataValue +  '"]').off().on('change', function(evt){
+                    var dragObj = null;
+                    var draggableObj = null;
+                    var droppableElem = $('.drop-item[data-value="' + dropItemDataValue +  '"]');
+                    var val = ($(this).val()).split(' - ')[0];
+                    var icon = ($(this).val()).split(' - ')[1];
+                    
+                    /* $('.drag-item').each(function(){
+                        $(this).find('.submit-response-drag').removeClass('correct').removeClass('incorrect');
+                        $(this).attr('style','');
+                        //$(this).appendTo(('.drag-item-wrap[data-icon="' + $(this).attr("data-icon") + '"]'));
+                        $(this).appendTo(('.drag-item-wrap[data-icon="' + $(this).attr("data-icon") + '"] .drag-holder'));
+                        if($(this).hasClass('red-border'))
+                        {
+                            $(this).removeClass('red-border').addClass('gray-border');
+                        }
+                    }); */
 
-                        $('.drag-item').each(function(index3, value3){
-                            if($(this).attr('data-icon') == icon)
-                            {
-                                draggableObj = $(this);
-                                dragObj = value3;
+                    $('.drag-item').each(function(index3, value3) {
+                        if($(this).attr('data-icon') == icon) {
+                            draggableObj = $(this);
+                            dragObj = value3;
 
-                                $('.drop-select-wrap select option').each(function(index4, value4){
-                                    if($(this).prop("selected") == false && (($(this).val()).split(' - ')[1]) == icon)
-                                    {
-                                        $(this).remove();
+                            $('.drop-select-wrap select option').each(function (ai,av) {
+                                const optVal = (av.getAttribute('value').split(' - ')[0]).trim();
+                                if(val.length > 0 && val == optVal) {
+                                    av.disabled = true;
+                                }
+                            });
+                            if(droppableElem.find('.drag-item').length > 0) {
+                                const dragItem = $(droppableElem.find('.drag-item'));
+                                const dragIcon = dragItem.attr('data-icon');
+                                // console.log($(droppableElem.find('.drag-item')));
+                                dragItem.find('.submit-response-drag').removeClass('correct').removeClass('incorrect');
+                                dragItem.attr('style','');
+                                dragItem.appendTo(('.drag-item-wrap[data-icon="' + dragIcon + '"] .drag-holder'));
+                                if(dragItem.hasClass('red-border')) {
+                                    dragItem.removeClass('red-border').addClass('gray-border');
+                                }
+                                $('.drop-select-wrap select option').each(function (ai,av) {
+                                    const optVal = (av.getAttribute('value').split(' - ')[0]).trim();
+                                    if(val.length > 0 && dragIcon == optVal) {
+                                        av.disabled = false;
                                     }
                                 });
-                                $('.drop-item').each(function(index, value){
-                                    droppableElem = this;
-
-                                    if($(this).find('.drag-item').length <= 0)
-                                    {
-                                        $(draggableObj).detach().css({top: 0,left: 0, position: 'absolute'}).appendTo(droppableElem);
-                                        $(this).css({display: 'inline-block'});
-                                        return false;
-                                    }
-                                });
-                                return false;
                             }
-                        });
+                            console.log(droppableElem.find('.drag-item').length);
+                            $(draggableObj).detach().css({top: 0,left: 0, position: 'absolute'}).appendTo(droppableElem);
+                            $(this).css({display: 'inline-block'});
+                            // console.log(droppableElem.children());
+                            return false;
+                        }
                     });
                 });
             }
