@@ -3,13 +3,12 @@
 }
 .droppable-area {
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   text-align: center;
   position: relative;
   display: table;
   height: 150px;
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .draggable-area {
@@ -188,60 +187,57 @@
 }
 
 #resource-info-wrap {
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  display: none;
-  margin-top: 10%;
-  margin-left: -50%;
+  position:fixed;
+  z-index:5;
+  width:100%;
+  display:none;
 }
 
 #resource-info-box {
-  margin: 0 auto 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  color: #555;
-  height: 100px;
-  display: table;
-  position: relative;
-  overflow: auto;
-  border: 1px solid #E6E7E8;
-  width: 100%;
+  margin:0 auto 10px;
+  padding:10px;
+  background-color:#fff;
+  color:#555;
+  width:300px;
+  height:100px;
+  display:table;
+  position:relative;
+  overflow:auto;
+  border:1px solid var(--blue);
 }
 
 #resource-info-close-btn {
-  padding: 5px 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  padding:5px 10px;
+  position:absolute;
+  top:0;
+  right:0;
   color: #fff;
-  background-color: #C01818;
-  cursor: pointer;
-  border-radius: 0 5px 0 0;
+  background-color: var(--blue);
+  cursor:pointer;
 }
 
 #resource-info-close-btn:hover {
-  background-color: #75160D;
+  background-color: #0a58ca;
 }
 
 #resource-info {
-  margin-top: 25px;
-  max-height: 250px;
-  overflow: auto;
-  font-size: 1.25em;
+  margin-top:25px;
+  max-height:250px;
+  overflow:auto;
+  font-size:1.25em;
 }
 
 #resource-info-wrap .row {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+  position:absolute;
+  bottom:0px;
+  width:100%;
 }
 
 .drag-select {
   margin-top: 20px;
   display: block;
   font-size: 1.2em;
+  width: 100%;
 }
 
 #red-cloud-wrap {
@@ -314,25 +310,29 @@
 .submit-response-drop.missing:hover {
   background-color: #B1BABF;
 }
-
+.submit-response-drag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .submit-response-drag.correct {
   background-image: url(../img/response_correct.svg);
 }
 
 .submit-response-drag.incorrect {
-  background-image: url(../img/response-incorrect.svg);
+  background-image: url(../img/response_incorrect.svg);
 }
 
 .submit-response-drop.missing {
-  background-image: url(../img/response-missing.svg);
+  background-image: url(../img/response_missing.svg);
 }
 
-#incorrect-red{
+.incorrect-red{
   color: #C01818;
   font-weight: bold;
   font-size: 14px;
 }
-#correct-green{
+.correct-green{
   color: #198754;
   font-weight: bold;
   font-size: 14px;
@@ -468,7 +468,14 @@
 #resource-info-box {
   width: 800px;
 }
-
+.drop-select-wrap {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dontDisplay {
+  display: none;
+}
 @media (min-width:1200px) {
   .drop-item, .drag-item-wrap, .drag-item {
     width: 90px;
@@ -476,11 +483,10 @@
   }
   .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
     background-size: 80px 80px;
-
   }
   .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
-    width: 60px;
-    height: 60px;
+    width: 86px;
+    height: 86px;
   }
   .drag-item-info {
     width: 30px;
@@ -500,6 +506,9 @@
   }
   .drop-select-wrap {
     display: none;
+  }
+  .draggable-area {
+    display: block;
   }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
@@ -525,9 +534,15 @@
     left: 120px;
   }
   #cloud-building, #cloud-server, #cloud-car {
-    width: 500px;
-    height: 500px;
-    background-size: 500px 500px;
+    width: 540px;
+    height: 540px;
+    background-size: 520px 520px;
+  }
+  #cloud-server {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .droppable-area {
+    background-color: transparent;
   }
   .container{
     margin-top: 10px;
@@ -566,6 +581,9 @@
   .drop-select-wrap {
     display: none;
   }
+  .draggable-area {
+    display: block;
+  }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
     margin-right: auto;
@@ -590,9 +608,15 @@
     left: 120px;
   }
   #cloud-building, #cloud-server, #cloud-car {
-    width: 500px;
-    height: 500px;
+    width: 520px;
+    height: 520px;
     background-size: 500px 500px;
+  }
+  #cloud-server {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .droppable-area {
+    background-color: transparent;
   }
   .container{
     margin-top: 30px;
@@ -634,6 +658,9 @@
   .drop-select-wrap {
     display: none;
   }
+  .draggable-area {
+    display: block;
+  }
   .cloud-drop {
     top: 100px;
   }
@@ -654,9 +681,15 @@
     left: 120px;
   }
   #cloud-building, #cloud-server, #cloud-car {
-    width: 500px;
-    height: 500px;
+    width: 520px;
+    height: 520px;
     background-size: 500px 500px;
+  }
+  #cloud-server {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .droppable-area {
+    background-color: transparent;
   }
   .container{
     margin-top: 10px;
@@ -694,6 +727,9 @@
   .drop-select-wrap {
     display: none;
   }
+  .draggable-area {
+    display: block;
+  }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
     margin-right: auto;
@@ -722,6 +758,12 @@
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
+  }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
   }
   .container{
     margin-top: 10px;
@@ -765,6 +807,9 @@
   .drop-select-wrap {
     display: none;
   }
+  .draggable-area {
+    display: block;
+  }
   .drag-items-wrap, .drop-items-wrap {
     margin-left: auto;
     margin-right: auto;
@@ -776,10 +821,10 @@
     top: 100px;
   }
   .multiple-platform-drop {
-    top: 120px;
+    top: 100px;
   }
   .outdated-setting-drop {
-    top: 240px;
+    top: 220px;
   }
   .unsanctioned-drop {
     top: 180px;
@@ -793,6 +838,12 @@
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
+  }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
   }
   .container{
     margin-top: 30px;
@@ -808,8 +859,44 @@
 
 @media (max-width:766px) {
   .drop-item, .drag-item-wrap, .drag-item {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+  }
+  .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
+    background-size: 50px 50px;
+  }
+  .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
+    width: 46px;
+    height: 46px;
+  }
+  .drag-item-info {
+    width: 15px;
+    height: 15px;
+  }
+  #resource-info-wrap {
+    top: 60%;
+  }
+  #resource-info-box {
+    width: 50%;
+  }
+  #red-cloud-wrap, #red-cloud {
+    margin-top: 200px;
+  }
+  .drop-item {
+    background-color: #fff;
+  }
+  .drop-select-wrap {
+    display: none;
+  }
+  .drag-items-wrap, .drop-items-wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cloud-drop {
+    top: 60px;
+  }
+  .building-drop {
+    top: 90px;
   }
   .multiple-platform-drop {
     top: 160px;
@@ -835,6 +922,12 @@
     height: 500px;
     background-size: 400px 400px;
   }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
   .container{
     margin-top: 40px;
   }
@@ -843,6 +936,59 @@
   .drop-item, .drag-item-wrap, .drag-item {
     width: 70px;
     height: 70px;
+  }
+  .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
+    background-size: 70px 70px;
+  }
+  .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
+    width: 66px;
+    height: 66px;
+  }
+  .multiple-platform-drop {
+    top: 85px;
+  }
+  .outdated-setting-drop{
+    top: 220px;
+  }
+  .drag-item-info span{
+    bottom: 0px;
+    left: 10px;
+    font-size: 13px;
+  }
+  .incorrect-red{
+    font-size: 11px;
+  }
+  .correct-green{
+    font-size: 11px;
+  }
+  #cloud-building, #cloud-server, #cloud-car {
+    position: relative;
+    top: 10px;
+    width: 500px;
+    height: 500px;
+    background-size: 400px 400px;
+  }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  .container{
+    margin-top: 40px;
+  }
+}
+@media (max-width: 510px) {
+  .drop-item, .drag-item-wrap, .drag-item {
+    width: 75px;
+    height: 75px;
+  }
+  .icon-brand, .submit-response-drag, .submit-response-drop, .drop-icn {
+    background-size: 70px 70px;
+  }
+  .submit-response-drag.correct, .submit-response-drag.incorrect, .submit-response-drop.missing {
+    width: 66px;
+    height: 66px;
   }
   .multiple-platform-drop {
     top: 160px;
@@ -855,43 +1001,10 @@
     left: 10px;
     font-size: 13px;
   }
-  #incorrect-red{
+  .incorrect-red{
     font-size: 11px;
   }
-  #correct-green{
-    font-size: 11px;
-  }
-  #cloud-building, #cloud-server, #cloud-car {
-    position: relative;
-    top: 10px;
-    width: 500px;
-    height: 500px;
-    background-size: 400px 400px;
-  }
-  .container{
-    margin-top: 40px;
-  }
-}
-@media (max-width: 510px) {
-  .drop-item, .drag-item-wrap, .drag-item {
-    width: 75px;
-    height: 75px;
-  }
-  .multiple-platform-drop {
-    top: 130px;
-  }
-  .outdated-setting-drop{
-    top: 240px;
-  }
-  .drag-item-info span{
-    bottom: 0px;
-    left: 10px;
-    font-size: 13px;
-  }
-  #incorrect-red{
-    font-size: 11px;
-  }
-  #correct-green{
+  .correct-green{
     font-size: 11px;
   }
   #cloud-building, #cloud-server, #cloud-car {
@@ -899,6 +1012,12 @@
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
+  }
+  #cloud-server {
+    background-color: transparent;
+  }
+  .droppable-area {
+    background-color: rgba(255, 255, 255, 0.4)
   }
   .container{
     margin-top: 40px;
@@ -930,20 +1049,20 @@
     height: 75px;
   }
   .multiple-platform-drop {
-    top: 130px;
+    top: 65px;
   }
   .outdated-setting-drop{
-    top: 240px;
+    top: 160px;
   }
   .drag-item-info span{
     bottom: 0px;
     left: 10px;
     font-size: 13px;
   }
-  #incorrect-red{
+  .incorrect-red{
     font-size: 11px;
   }
-  #correct-green{
+  .correct-green{
     font-size: 11px;
   }
   #cloud-building, #cloud-server, #cloud-car {
@@ -951,13 +1070,13 @@
     width: 350px;
     height: 350px;
     background-size: 350px 350px;
-    margin-top: 250px;
   }
   .container{
     margin-top: 40px;
   }
   .droppable-area {
-    height: 680px;
+    margin-top: 50%;
+    height: 500px;
     display: block;
   }
 }
